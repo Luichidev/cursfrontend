@@ -1,2 +1,2 @@
 # cursfrontend
-curs CSS HTML i JAVASCRIPT vue
+Curs de HTML, CSS, JAVASCRIPT i VUE
