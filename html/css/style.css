@@ -1,0 +1,31 @@
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  border: 1px solid green;
+  padding: 8px;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+iframe {
+  /* aspect-ratio: 4/3; */
+  width: 50%;
+  height: 500px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  padding: 64px;
+}
