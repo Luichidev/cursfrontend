@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Contacta</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Contacta</title>
+</head>
+
+<body>
+  <section>
     <h1>Contacta</h1>
     <ul>
       <li><a href="index.html">Inici</a></li>
@@ -15,24 +18,99 @@
       <li><a href="presentacio.html">Presentació</a></li>
       <li><a href="contacta.html">Contacta</a></li>
     </ul>
-    <a href="https://www.youtube.com/watch?v=Mnb0Ae4cosE" target="_blank"
-      >Oso panda enfadado</a
-    >
-    <br />
-    <iframe
-      src="https://www.youtube.com/embed/Mnb0Ae4cosE"
-      title="Panda enfadado"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.486011584341!2d2.1922780157273505!3d41.40696740274335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33b347fdcf5%3A0x7f1daf890e757aa!2sC%2F%20del%20Per%C3%BA%2C%2052%2C%2008018%20Barcelona!5e0!3m2!1ses!2ses!4v1642764315362!5m2!1ses!2ses"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
-    </div>
-  </body>
+    <article>
+      <form action="#">
+        <h3>Dades bàsiques</h3>
+        <label for="name">Nom</label>
+        <input type="text"> <br>
+        <label for="Surname">Primer cognom</label>
+        <input type="text" placeholder="fica aqui el teu cognom">
+        <label for="lastname">Segon cognom</label>
+        <input type="text"> <br>
+        <label for="dni">Tipus de document</label> <br>
+        <select name="document" id="dni">
+          <option value="0">Tria el tipus de document</option>
+          <option value="1">DNI</option>
+          <option value="2">NIF</option>
+          <option value="3">Pasaport</option>
+        </select>
+        <label for="Ndni">Document d'identitat</label>
+        <input type="text"> <br>
+        <label>Ets</label>
+        <input type="radio" name="question1" id="1">
+        <label for="1">Home</label>
+        <input type="radio" name="question1" id="2">
+        <label for="2">Dona</label>
+        <label for="naximent">Data de naiximent</label>
+        <input type="date">
+
+        <h3>Dades de contacte</h3>
+        <label for="address">Adreça de correu</label> <br>
+        <input type="email">
+        <label for="phone">Telefon</label>
+        <input type="tel"> <br>
+        <label>Vius a Barcelona?</label>
+        <input type="radio" name="question2" id="1">
+        <label for="1">Si</label>
+        <input type="radio" name="question2" id="2">
+        <label for="2">No</label> <br>
+        <label>Tipus de via</label>
+        <select name="tRoads" id="tRoads">
+          <option value="0">Tria el tipus de via</option>
+          <option value="1">Carrer</option>
+          <option value="2">Avinguda</option>
+          <option value="3">Paseig</option>
+        </select>
+        <label>Adreça</label>
+        <input type="text">
+        <label>Número</label>
+        <input type="number"> <br>
+        <label>Pis</label>
+        <input type="text">
+        <label>Porta</label>
+        <input type="number">
+        <label>Escala</label>
+        <input type="text"> <br>
+        <label>Codi postal</label>
+        <input type="number">
+        <label>Població</label>
+        <select name="towns" id="towns">
+          <option value="0">BARCELONA</option>
+          <option value="1">MONTCADA</option>
+          <option value="1">MOLLET DEL VALLES</option>
+          <option value="1">CASTELLDEFELS</option>
+          <option value="1">VILADECANS</option>
+        </select>
+        <h3>Dades d'interes del curs</h3>
+        <label>Quina tecnologies que t'adradaria saber?</label> <br>
+        <input type="checkbox" name="js" id="js">
+        <label for="js">JavaScript</label> <br>
+        <input type="checkbox" name="css" id="css">
+        <label for="css">CSS3</label> <br>
+        <input type="checkbox" name="html" id="html">
+        <label for="html">HTML5</label> <br>
+        <input type="checkbox" name="vue" id="vue">
+        <label for="vue">VUE</label> <br>
+        <input type="checkbox" name="wp" id="wp">
+        <label for="wp">Wordpress</label> <br>
+        <label>Quina es el més t'interedssa aprendre?</label> <br>
+        <input type="radio" name="technologies" id="ijs">
+        <label for="js">JavaScript</label> <br>
+        <input type="radio" name="technologies" id="icss">
+        <label for="icss">CSS3</label> <br>
+        <input type="radio" name="technologies" id="ihtml">
+        <label for="ihtml">HTML5</label> <br>
+        <input type="radio" name="technologies" id="ivue">
+        <label for="ivue">VUE</label> <br>
+        <input type="radio" name="technologies" id="iwp">
+        <label for="iwp">Wordpress</label> <br>
+        <label>Observacions</label> <br>
+        <textarea name="observations" id="observations" cols="30" rows="10"></textarea> <br>
+        <button>Enviar ✈</button>
+      </form>
+    </article>
+  </section>
+
+</body>
+
 </html>
