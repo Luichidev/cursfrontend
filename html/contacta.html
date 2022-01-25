@@ -1,116 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contacta</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Contacta</title>
-</head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <h1>Contacta</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="paginalliure.html">Pagina Lliure</a></li>
+          <li><a href="presentacio.html">Presentació</a></li>
+          <li><a href="contacta.html">Contacta</a></li>
+          <li><a href="websemantica.html">Web semantica</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article>
+        <form action="#">
+          <h3>Dades bàsiques</h3>
+          <label for="name">Nom</label>
+          <input type="text" /> <br />
+          <label for="Surname">Primer cognom</label>
+          <input type="text" placeholder="fica aqui el teu cognom" />
+          <label for="lastname">Segon cognom</label>
+          <input type="text" /> <br />
+          <label for="dni">Tipus de document</label> <br />
+          <select name="document" id="dni">
+            <option value="0">Tria el tipus de document</option>
+            <option value="1">DNI</option>
+            <option value="2">NIF</option>
+            <option value="3">Pasaport</option>
+          </select>
+          <label for="Ndni">Document d'identitat</label>
+          <input type="text" /> <br />
+          <label>Ets</label>
+          <input type="radio" name="question1" id="1" />
+          <label for="1">Home</label>
+          <input type="radio" name="question1" id="2" />
+          <label for="2">Dona</label>
+          <label for="naximent">Data de naiximent</label>
+          <input type="date" />
 
-<body>
-  <section>
-    <h1>Contacta</h1>
-    <ul>
-      <li><a href="index.html">Inici</a></li>
-      <li><a href="paginalliure.html">Pagina Lliure</a></li>
-      <li><a href="presentacio.html">Presentació</a></li>
-      <li><a href="contacta.html">Contacta</a></li>
-    </ul>
-    <article>
-      <form action="#">
-        <h3>Dades bàsiques</h3>
-        <label for="name">Nom</label>
-        <input type="text"> <br>
-        <label for="Surname">Primer cognom</label>
-        <input type="text" placeholder="fica aqui el teu cognom">
-        <label for="lastname">Segon cognom</label>
-        <input type="text"> <br>
-        <label for="dni">Tipus de document</label> <br>
-        <select name="document" id="dni">
-          <option value="0">Tria el tipus de document</option>
-          <option value="1">DNI</option>
-          <option value="2">NIF</option>
-          <option value="3">Pasaport</option>
-        </select>
-        <label for="Ndni">Document d'identitat</label>
-        <input type="text"> <br>
-        <label>Ets</label>
-        <input type="radio" name="question1" id="1">
-        <label for="1">Home</label>
-        <input type="radio" name="question1" id="2">
-        <label for="2">Dona</label>
-        <label for="naximent">Data de naiximent</label>
-        <input type="date">
-
-        <h3>Dades de contacte</h3>
-        <label for="address">Adreça de correu</label> <br>
-        <input type="email">
-        <label for="phone">Telefon</label>
-        <input type="tel"> <br>
-        <label>Vius a Barcelona?</label>
-        <input type="radio" name="question2" id="1">
-        <label for="1">Si</label>
-        <input type="radio" name="question2" id="2">
-        <label for="2">No</label> <br>
-        <label>Tipus de via</label>
-        <select name="tRoads" id="tRoads">
-          <option value="0">Tria el tipus de via</option>
-          <option value="1">Carrer</option>
-          <option value="2">Avinguda</option>
-          <option value="3">Paseig</option>
-        </select>
-        <label>Adreça</label>
-        <input type="text">
-        <label>Número</label>
-        <input type="number"> <br>
-        <label>Pis</label>
-        <input type="text">
-        <label>Porta</label>
-        <input type="number">
-        <label>Escala</label>
-        <input type="text"> <br>
-        <label>Codi postal</label>
-        <input type="number">
-        <label>Població</label>
-        <select name="towns" id="towns">
-          <option value="0">BARCELONA</option>
-          <option value="1">MONTCADA</option>
-          <option value="1">MOLLET DEL VALLES</option>
-          <option value="1">CASTELLDEFELS</option>
-          <option value="1">VILADECANS</option>
-        </select>
-        <h3>Dades d'interes del curs</h3>
-        <label>Quina tecnologies que t'adradaria saber?</label> <br>
-        <input type="checkbox" name="js" id="js">
-        <label for="js">JavaScript</label> <br>
-        <input type="checkbox" name="css" id="css">
-        <label for="css">CSS3</label> <br>
-        <input type="checkbox" name="html" id="html">
-        <label for="html">HTML5</label> <br>
-        <input type="checkbox" name="vue" id="vue">
-        <label for="vue">VUE</label> <br>
-        <input type="checkbox" name="wp" id="wp">
-        <label for="wp">Wordpress</label> <br>
-        <label>Quina es el més t'interedssa aprendre?</label> <br>
-        <input type="radio" name="technologies" id="ijs">
-        <label for="js">JavaScript</label> <br>
-        <input type="radio" name="technologies" id="icss">
-        <label for="icss">CSS3</label> <br>
-        <input type="radio" name="technologies" id="ihtml">
-        <label for="ihtml">HTML5</label> <br>
-        <input type="radio" name="technologies" id="ivue">
-        <label for="ivue">VUE</label> <br>
-        <input type="radio" name="technologies" id="iwp">
-        <label for="iwp">Wordpress</label> <br>
-        <label>Observacions</label> <br>
-        <textarea name="observations" id="observations" cols="30" rows="10"></textarea> <br>
-        <button>Enviar ✈</button>
-      </form>
-    </article>
-  </section>
-
-</body>
-
+          <h3>Dades de contacte</h3>
+          <label for="address">Adreça de correu</label> <br />
+          <input type="email" />
+          <label for="phone">Telefon</label>
+          <input type="tel" /> <br />
+          <label>Vius a Barcelona?</label>
+          <input type="radio" name="question2" id="1" />
+          <label for="1">Si</label>
+          <input type="radio" name="question2" id="2" />
+          <label for="2">No</label> <br />
+          <label>Tipus de via</label>
+          <select name="tRoads" id="tRoads">
+            <option value="0">Tria el tipus de via</option>
+            <option value="1">Carrer</option>
+            <option value="2">Avinguda</option>
+            <option value="3">Paseig</option>
+          </select>
+          <label>Adreça</label>
+          <input type="text" />
+          <label>Número</label>
+          <input type="number" /> <br />
+          <label>Pis</label>
+          <input type="text" />
+          <label>Porta</label>
+          <input type="number" />
+          <label>Escala</label>
+          <input type="text" /> <br />
+          <label>Codi postal</label>
+          <input type="number" />
+          <label>Població</label>
+          <select name="towns" id="towns">
+            <option value="0">BARCELONA</option>
+            <option value="1">MONTCADA</option>
+            <option value="1">MOLLET DEL VALLES</option>
+            <option value="1">CASTELLDEFELS</option>
+            <option value="1">VILADECANS</option>
+          </select>
+          <h3>Dades d'interes del curs</h3>
+          <label>Quina tecnologies que t'adradaria saber?</label> <br />
+          <input type="checkbox" name="js" id="js" />
+          <label for="js">JavaScript</label> <br />
+          <input type="checkbox" name="css" id="css" />
+          <label for="css">CSS3</label> <br />
+          <input type="checkbox" name="html" id="html" />
+          <label for="html">HTML5</label> <br />
+          <input type="checkbox" name="vue" id="vue" />
+          <label for="vue">VUE</label> <br />
+          <input type="checkbox" name="wp" id="wp" />
+          <label for="wp">Wordpress</label> <br />
+          <label>Quina es el més t'interedssa aprendre?</label> <br />
+          <input type="radio" name="technologies" id="ijs" />
+          <label for="js">JavaScript</label> <br />
+          <input type="radio" name="technologies" id="icss" />
+          <label for="icss">CSS3</label> <br />
+          <input type="radio" name="technologies" id="ihtml" />
+          <label for="ihtml">HTML5</label> <br />
+          <input type="radio" name="technologies" id="ivue" />
+          <label for="ivue">VUE</label> <br />
+          <input type="radio" name="technologies" id="iwp" />
+          <label for="iwp">Wordpress</label> <br />
+          <label>Observacions</label> <br />
+          <textarea
+            name="observations"
+            id="observations"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <br />
+          <button>Enviar ✈</button>
+        </form>
+      </article>
+    </section>
+    <footer>
+      <p>Web de pandas &copy;</p>
+    </footer>
+  </body>
 </html>

@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pagina Lliure</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Pagina Lliure</title>
-</head>
-
-<body>
-  <h1>Pagina Lliure</h1>
-  <ul>
-    <li><a href="index.html">Inici</a></li>
-    <li><a href="paginalliure.html">Pagina Lliure</a></li>
-    <li><a href="presentacio.html">Presentació</a></li>
-    <li><a href="contacta.html">Contacta</a></li>
-  </ul>
-  <div>
-    <img src="./images/baby-panda.jpg" alt="panda bebe" width="500" height="600" />
-  </div>
-  <div>
-    <table>
-      <tr>
-        <td colspan="2">Tabla puzzle</td>
-        <td rowspan="3"><a href="https://www.youtube.com/">youtube</a></td>
-        <td>4</td>
-        <td rowspan="2">5</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>7</td>
-        <td>9</td>
-      </tr>
-      <tr>
-        <td colspan="2">11</td>
-        <td><img src="./images/baby-panda02.jpg" alt="osito panda" /></td>
-        <td>15</td>
-      </tr>
-    </table>
-  </div>
-  <a href="https://www.youtube.com/watch?v=Mnb0Ae4cosE" target="_blank">Oso panda enfadado</a>
-  <br />
-  <iframe src="https://www.youtube.com/embed/Mnb0Ae4cosE" title="Panda enfadado" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-  <div>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.486011584341!2d2.1922780157273505!3d41.40696740274335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33b347fdcf5%3A0x7f1daf890e757aa!2sC%2F%20del%20Per%C3%BA%2C%2052%2C%2008018%20Barcelona!5e0!3m2!1ses!2ses!4v1642764315362!5m2!1ses!2ses"
-      style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-</body>
-
+  <body>
+    <header>
+      <div class="logo"></div>
+      <h1>Pagina Lliure</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="paginalliure.html">Pagina Lliure</a></li>
+          <li><a href="presentacio.html">Presentació</a></li>
+          <li><a href="contacta.html">Contacta</a></li>
+          <li><a href="websemantica.html">Web semantica</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+      <img
+        src="./images/baby-panda.jpg"
+        alt="panda bebe"
+        width="500"
+        height="600"
+      />
+    </div>
+    <div>
+      <table>
+        <tr>
+          <td colspan="2">Tabla puzzle</td>
+          <td rowspan="3"><a href="https://www.youtube.com/">youtube</a></td>
+          <td>4</td>
+          <td rowspan="2">5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>7</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td colspan="2">11</td>
+          <td><img src="./images/baby-panda02.jpg" alt="osito panda" /></td>
+          <td>15</td>
+        </tr>
+      </table>
+    </div>
+    <a href="https://www.youtube.com/watch?v=Mnb0Ae4cosE" target="_blank"
+      >Oso panda enfadado</a
+    >
+    <br />
+    <div>
+      <iframe
+        src="https://www.youtube.com/embed/Mnb0Ae4cosE"
+        title="Panda enfadado"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.486011584341!2d2.1922780157273505!3d41.40696740274335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33b347fdcf5%3A0x7f1daf890e757aa!2sC%2F%20del%20Per%C3%BA%2C%2052%2C%2008018%20Barcelona!5e0!3m2!1ses!2ses!4v1642764315362!5m2!1ses!2ses"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+    <footer>
+      <p>Web de pandas &copy;</p>
+    </footer>
+  </body>
 </html>
