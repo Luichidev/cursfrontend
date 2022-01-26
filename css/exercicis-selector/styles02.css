@@ -1,0 +1,16 @@
+.link {
+  color: red;
+  font-size: 2rem;
+  margin: 0 0 32px;
+  list-style: none;
+}
+
+.a-link {
+  color: inherit;
+}
+
+.active {
+  background-color: red;
+  color: white;
+  text-decoration: none;
+}
