@@ -1,0 +1,62 @@
+section {
+  padding: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  margin: 16px 0;
+}
+
+form {
+  max-width: 610px;
+}
+
+#blank {
+  color: transparent;
+}
+
+.input {
+  width: 280px;
+}
+
+.dbinput {
+  display: inline-block;
+  width: 130px;
+  margin-right: 16px;
+}
+
+.dbinput input {
+  width: 100%;
+}
+
+.form-group {
+  display: inline-block;
+  width: 49%;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-label span {
+  color: red;
+}
+
+.form-placeholder {
+  display: block;
+  font-size: 0.7rem;
+  color: grey;
+  margin-bottom: 8px;
+}
+
+.form-button {
+  text-align: right;
+}
+
+.mb-5 {
+  margin-bottom: 56px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}

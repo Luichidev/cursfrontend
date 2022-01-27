@@ -2,13 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="styles03.css" />
+    <link rel="stylesheet" href="styles05.css" />
     <title>Ejercicio de formularios</title>
   </head>
 
   <body>
     <section>
       <h1>Formulario de alta</h1>
+      <article>
+        <form action="#">
+          <div class="form-group">
+            <label class="form-label">Nombre y apellidos <span>*</span></label>
+            <div class="form-input">
+              <input type="text" />
+              <span class="form-placeholder">Nombre</span>
+            </div>
+            <div class="form-input">
+              <input class="input" type="text" />
+              <span class="form-placeholder">Primer apellido</span>
+            </div>
+            <div class="form-input mb-5">
+              <input class="input" type="text" />
+              <span class="form-placeholder">Segundo apellido</span>
+            </div>
+            <div class="form-subgroup">
+              <label class="form-label">Email</label>
+              <input class="email" type="email" />
+              <span id="blank" class="form-placeholder">Fijo</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Dirección <span>*</span></label>
+            <div class="form-input">
+              <input class="input" type="text" />
+              <span class="form-placeholder">Calle, número, piso, puerta</span>
+            </div>
+            <div class="form-input">
+              <div class="dbinput">
+                <input type="text" />
+                <span class="form-placeholder">Código postal</span>
+              </div>
+              <div class="dbinput">
+                <input type="text" />
+                <span class="form-placeholder">Municipio</span>
+              </div>
+            </div>
+            <div class="form-input mb-3">
+              <div class="dbinput">
+                <input type="text" />
+                <span class="form-placeholder">Provincia</span>
+              </div>
+              <div class="dbinput">
+                <input type="text" />
+                <span class="form-placeholder">Pais</span>
+              </div>
+            </div>
+            <div class="form-subgroup">
+              <label class="form-label">Teléfono <span>*</span></label>
+              <div class="form-input">
+                <div class="dbinput">
+                  <input type="tel" />
+                  <span class="form-placeholder">Fijo</span>
+                </div>
+                <div class="dbinput">
+                  <input type="tel" />
+                  <span class="form-placeholder">Móvil</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="form-button">
+            <button>Darme de alta ➡</button>
+          </div>
+        </form>
+      </article>
     </section>
   </body>
 </html>
