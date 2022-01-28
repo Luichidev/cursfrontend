@@ -25,7 +25,8 @@ form {
   margin-right: 16px;
 }
 
-.dbinput input {
+.dbinput input,
+.dbinput select {
   width: 100%;
 }
 
@@ -40,6 +41,7 @@ form {
 
 .form-label span {
   color: red;
+  font-size: 1.5rem;
 }
 
 .form-placeholder {
@@ -53,8 +55,8 @@ form {
   text-align: right;
 }
 
-.mb-5 {
-  margin-bottom: 56px;
+.mb-4 {
+  margin-bottom: 48px;
 }
 
 .mb-3 {

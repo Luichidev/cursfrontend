@@ -14,19 +14,19 @@
           <div class="form-group">
             <label class="form-label">Nombre y apellidos <span>*</span></label>
             <div class="form-input">
-              <input type="text" />
+              <input type="text" required />
               <span class="form-placeholder">Nombre</span>
             </div>
             <div class="form-input">
-              <input class="input" type="text" />
+              <input class="input" type="text" required />
               <span class="form-placeholder">Primer apellido</span>
             </div>
-            <div class="form-input mb-5">
-              <input class="input" type="text" />
+            <div class="form-input mb-4">
+              <input class="input" type="text" required />
               <span class="form-placeholder">Segundo apellido</span>
             </div>
             <div class="form-subgroup">
-              <label class="form-label">Email</label>
+              <label class="form-label">Email</label> <br />
               <input class="email" type="email" />
               <span id="blank" class="form-placeholder">Fijo</span>
             </div>
@@ -34,26 +34,32 @@
           <div class="form-group">
             <label class="form-label">Dirección <span>*</span></label>
             <div class="form-input">
-              <input class="input" type="text" />
+              <input class="input" type="text" required />
               <span class="form-placeholder">Calle, número, piso, puerta</span>
             </div>
             <div class="form-input">
               <div class="dbinput">
-                <input type="text" />
+                <input type="text" required />
                 <span class="form-placeholder">Código postal</span>
               </div>
               <div class="dbinput">
-                <input type="text" />
+                <input type="text" required />
                 <span class="form-placeholder">Municipio</span>
               </div>
             </div>
             <div class="form-input mb-3">
               <div class="dbinput">
-                <input type="text" />
+                <select name="provincias" id="provincias">
+                  <option value="-1"></option>
+                  <option value="0">Barcelona</option>
+                </select>
                 <span class="form-placeholder">Provincia</span>
               </div>
               <div class="dbinput">
-                <input type="text" />
+                <select name="pais" id="pais">
+                  <option value="-1"></option>
+                  <option value="0">España</option>
+                </select>
                 <span class="form-placeholder">Pais</span>
               </div>
             </div>
@@ -61,7 +67,7 @@
               <label class="form-label">Teléfono <span>*</span></label>
               <div class="form-input">
                 <div class="dbinput">
-                  <input type="tel" />
+                  <input type="tel" required />
                   <span class="form-placeholder">Fijo</span>
                 </div>
                 <div class="dbinput">
