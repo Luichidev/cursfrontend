@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercici 01</title>
+  <style>
+    aside {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    .column {
+      width: 400px;
+      padding: 8px;
+      display: inline-block;
+      border: 1px solid black;
+      margin-bottom: 8px;
+    }
+
+    main {
+      width: 840px;
+      margin-bottom: 8px;
+    }
+
+    main div {
+      border: 1px solid black;
+      padding: 8px;
+      width: 500px;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    aside {
+      width: 300px;
+      display: inline-block;
+    }
+
+    .content {
+      padding: 8px;
+      border: 1px solid black;
+      margin-bottom: 8px;
+      width: 750px;
+      float: left;
+    }
+
+    .div-left {
+      background-color: #ccc;
+      width: 150px;
+      float: right;
+    }
+
+    .div-flex {
+      clear: both;
+      display: flex;
+    }
+
+    .div-flex div {
+      width: 400px;
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="column">Contenido de la primera columna</div>
+  <div class="column">Contenido de la segunda columna</div>
+  <main>
+    <div>
+      Contenido principal
+    </div>
+    <aside>Barra lateral</aside>
+  </main>
+  <div class="div-float">
+    <div class="content">Aquí irá el contenido principal del contenido o menú lateral</div>
+    <div class="div-left">Aquí irá el contenido alineado a la izquierda</div>
+  </div>
+  <div class="div-flex">
+    <div>Contenido de la primera columna</div>
+    <div>Contenido de la segunda columna</div>
+  </div>
+</body>
+
+</html>
