@@ -14,12 +14,13 @@ header,
 article,
 aside,
 footer {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 article,
-aside {
-  height: 500px;
+aside,
+.banner {
+  height: 300px;
   margin: 16px 0 16px;
 }
 
@@ -48,6 +49,17 @@ footer {
 }
 .flex-4 {
   flex: 4;
+}
+
+/*-------------Estilos Header ---------------*/
+header {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+nav,
+.banner {
+  min-width: 100%;
 }
 
 /*-------------Estilos Menu ---------------*/
@@ -89,19 +101,13 @@ footer {
 /*-------------Estilos Mobil ---------------*/
 
 @media screen and (max-width: 420px) {
-  header {
-    text-align: center;
-    flex-wrap: wrap;
-  }
-  .logo,
-  .title,
-  .extra {
-    min-width: 100%;
-  }
   section {
     flex-wrap: wrap;
   }
   .card {
     width: 100%;
+  }
+  .menu {
+    flex-direction: column;
   }
 }
