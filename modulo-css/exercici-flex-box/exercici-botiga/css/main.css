@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+header,
+article,
+aside,
+footer {
+  border: 1px solid black;
+}
+
+article,
+aside {
+  height: 500px;
+  margin: 16px 0 16px;
+}
+
+footer {
+  height: 100px;
+  text-align: center;
+}
+
+/*-------------Estilos Generales ---------------*/
+.container {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-4 {
+  flex: 4;
+}
+
+/*-------------Estilos Menu ---------------*/
+.item {
+  text-align: center;
+  list-style: none;
+}
+.item a {
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+}
+
+/*-------------Estilos card ---------------*/
+.product-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.card {
+  width: 46%;
+  max-width: 420px;
+  border: 1px solid #046abd;
+  margin: 8px;
+}
+
+/*-------------Estilos Tablet ---------------*/
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-wrap: wrap;
+  }
+  article,
+  aside {
+    min-width: 100%;
+  }
+}
+
+/*-------------Estilos Mobil ---------------*/
+
+@media screen and (max-width: 420px) {
+  header {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .logo,
+  .title,
+  .extra {
+    min-width: 100%;
+  }
+  section {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 100%;
+  }
+}
