@@ -1,0 +1,28 @@
+body {
+  background-color: #1453b2;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gray;
+  gap: 1rem;
+}
+.item {
+  padding: 2rem;
+  border: 1rem solid lightseagreen;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+.item7 {
+  /*flex-grow: 4; /*tamaño grande*/
+  /* flex-shrink: 4; /*Tamaño pequeño*/
+  /* flex-basis: 20%; /*Tamaño como el width */
+  flex: 1 2 20%; /* 1=flex-grow, 2=flex-shirink, 20%= flex-basic*/
+}
+
+.item1 {
+  order: 3;
+}
