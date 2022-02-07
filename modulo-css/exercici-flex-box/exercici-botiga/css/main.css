@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
 
+/*-------------Estilos Generales ---------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,18 +20,16 @@ img {
   width: 100%;
 }
 
-/*-------------Estilos Generales ---------------*/
+/*-------------Clases Generales ---------------*/
 .container {
   max-width: 1200px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 8px;
 }
-
 .flex-container {
   display: flex;
 }
-
 .flex-1 {
   flex: 1;
 }
@@ -40,7 +39,6 @@ img {
 .flex-4 {
   flex: 4;
 }
-
 .btn {
   display: block;
   margin: 8px auto;
@@ -55,7 +53,6 @@ img {
   padding: 0.84rem 2.14rem;
   font-size: 0.81rem;
 }
-
 .bg-main {
   background-color: var(--mainColor);
   color: #fff;
@@ -140,6 +137,7 @@ header {
   height: 32px;
   padding: 8px;
 }
+
 /*-------------Estilos Aside ---------------*/
 aside {
   flex-direction: column;
@@ -151,6 +149,7 @@ aside {
 .ads h3 {
   padding-bottom: 8px;
 }
+
 /*-------------Estilos articles ---------------*/
 .paginated {
   width: 100%;
