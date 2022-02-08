@@ -9,6 +9,6 @@
   "author": "@Luichidev",
   "license": "ISC",
   "dependencies": {
-    "boostrap": "^2.0.0"
+    "boostrap": "2.0.0"
   }
 }
