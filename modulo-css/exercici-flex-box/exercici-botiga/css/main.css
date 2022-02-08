@@ -273,6 +273,13 @@ footer {
   section {
     flex-direction: column;
   }
+  .menu-container {
+    flex-direction: column;
+    display: none;
+  }
+  nav > span {
+    display: block;
+  }
 }
 
 /*-------------Estilos Mobil ---------------*/
