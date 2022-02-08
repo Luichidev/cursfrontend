@@ -24,6 +24,7 @@ nav {
   background-color: var(--mainColor);
   height: 43px;
   position: sticky;
+  text-align: right;
   top: 0;
   z-index: 11;
 }
@@ -32,7 +33,6 @@ nav {
   max-width: 1200px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 8px;
 }
 .flex-container {
   display: flex;
