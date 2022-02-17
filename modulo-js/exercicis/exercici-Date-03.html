@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercici 03 | date</title>
+</head>
+
+<body>
+  <script>
+
+    let aniversary = prompt("Inserta la fecha de tu cumple, eg. YYYY-MM-DD")
+    let dateAniversary = new Date(aniversary);
+
+    let milisegundos = Date.now() - dateAniversary.getTime()
+    let year = milisegundos / (365 * 24 * 3600 * 1000)
+    let month = year * 12
+    let day = milisegundos / (24 * 3600 * 1000)
+    let segonds = milisegundos / 1000
+
+    document.write('<p> ' + dateAniversary + '</p>')
+    document.write('<p> Tienes ' + Math.floor(year) + ' años </p>')
+    document.write('<p> faltan ' + month + ' meses para tu cumple</p>')
+    document.write('<p> faltan ' + day + ' días para tu cumple</p>')
+    document.write('<p> faltan ' + segonds + ' segundos para tu cumple</p>')
+    document.write('<p> faltan ' + milisegundos + ' milisegundos para tu cumple</p>')
+
+
+  </script>
+</body>
+
+</html>

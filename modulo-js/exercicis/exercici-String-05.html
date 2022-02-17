@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercici 05 | String</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Realitzar la cerca d'un string en un string origen.
+      // Per fer-ho cal demanar per pantalla una frase o text (la font) i després una paraula a cercar.
+      // En cas de trobar-la, imprimir la posició, sinó un missatge que indiqui que no hi és.
+      let phrase = prompt('Escribe tu frase favorita')
+      let searchString = prompt(
+        'Escribe una palabra que quieras buscar de tu frase'
+      )
+
+      document.write('<h1><i>"' + phrase + '"</i></h1>')
+      document.write(
+        '<h3>Palabra a buscar: <span>' + searchString + '</span></h3>'
+      )
+
+      let position = phrase.search(searchString)
+
+      if (position > 0) {
+        document.write(
+          '<h3>La posicion de <span>' +
+            searchString +
+            '</span> en la frase es: ' +
+            position +
+            '</h3>'
+        )
+      } else {
+        document.write(
+          '<h3>⛔ <span>' + searchString + '</span> no está en la frase.⛔</h3>'
+        )
+      }
+
+      // Quina es la longitud de la Frase?
+      document.write(
+        '<h4> la Longitud de la frase es: ' + phrase.length + '</h4>'
+      )
+    </script>
+  </body>
+</html>
