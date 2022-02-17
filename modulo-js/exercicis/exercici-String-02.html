@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercici 02 | String</title>
+  </head>
+  <body>
+    <script>
+      const producto = 'Monitor 20 Pulgadas'
+      // a. Reemplaça Pulgadas per ‘. Reemplaça 20 per 40.
+      let newProducto = producto.replace('Pulgadas', '"')
+      newProducto = newProducto.replace('20', '40')
+      document.write('<p>' + newProducto + '</p>')
+
+      // b. Extreu en una nova variable la següent part de la frase: 40 Pulgadas.
+      let partOfProduct = producto.slice(newProducto.indexOf('4'))
+      document.write('<p>' + partOfProduct + '</p>')
+
+      // c. Extreu en una nova variable la següent part de la farase: nitor 20.
+      let start = producto.indexOf('n')
+      let end = producto.indexOf('P')
+      partOfProduct = producto.slice(start, end)
+      document.write('<p>' + partOfProduct + '</p>')
+
+      // d. Declara una variable i assignali el teu Nom. Mostra la primer lletra d’aquesta variable.
+      let name = 'Luis Alberto'
+      document.write('<p>' + name.charAt(0) + '</p>')
+    </script>
+  </body>
+</html>
