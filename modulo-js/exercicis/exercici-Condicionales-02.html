@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 02 | Condicionales</title>
+  </head>
+  <body>
+    <script>
+      // Imagina’t que en la teva botiga els usuaris poden tenir 3 roles:
+      // • ADMIN: El Usuario puede editar, eliminar y ver toda la información
+      // • EDITOR: El usuario solo puede editar sus registros
+      // • AUTOR: El usuario solo puede registrar usuarios
+      // • ANOMYMOUS: El Usuario es visitante, solo puede ver la información
+      // Controla les accions que poden fer cadascún d’ells amb un if
+      let rol = 'ADMIN'
+
+      switch (rol) {
+        case 'ADMIN':
+          document.write(
+            '<p>El usuario es Administrador, puede editar, eliminar y ver toda la informacion</p>'
+          )
+          break
+
+        default:
+          break
+      }
+    </script>
+  </body>
+</html>
