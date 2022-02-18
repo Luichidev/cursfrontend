@@ -31,10 +31,10 @@ let msg2 = "You're = You are"
 // console.log(numero % 2 === 0 ? 'es par' : 'es impar')
 
 // 6.-
-let altura = +prompt('Dime tu altura?')
-let peso = +prompt('Dime tu peso?')
-let imc = peso / (altura ^ 2)
-console.log('Tu indice de masa corporal es ' + imc.toFixed(2))
+// let altura = +prompt('Dime tu altura?')
+// let peso = +prompt('Dime tu peso?')
+// let imc = peso / (altura ^ 2)
+// console.log('Tu indice de masa corporal es ' + imc.toFixed(2))
 
 // 7.-
 let marca = 'total' + (16 + 4)

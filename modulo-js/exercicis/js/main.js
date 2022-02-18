@@ -1,3 +1,10 @@
+/* FUNCIONES 
+  Author: @Luichidev
+  Web: https://luichi.dev
+  Creation_Date: 16/02/2022
+  Revision: 16/02/2022
+*/
+
 const $ = (ele) => document.querySelector(ele)
 const css = (ele, color, size, align) => {
   $(ele).style.color = color
@@ -5,9 +12,9 @@ const css = (ele, color, size, align) => {
   $(ele).style.textAlign = align
 }
 
-css('h1', '#196deb', '3rem', 'center')
-css('h2', '#c3c3c3', '3rem', 'center')
-css('p', 'grey', '0.8rem', 'center')
+// css('h1', '#196deb', '3rem', 'center')
+// css('h2', '#c3c3c3', '3rem', 'center')
+// css('p', 'grey', '0.8rem', 'center')
 
 //---------------VARIABLES---------------//
 // Number
@@ -43,3 +50,19 @@ isNaN()
 // Obtendremos un valor Infinity en JavaScript cuando se excede el límite superior (+) o inferior (-) de coma flotante que son: 1.797693134862315E+308. y -1.797693134862315E+308.
 console.log(typeof Infinity)
 console.log(1.7976931348923157e10309)
+
+/*
+PROTOTYPE: Array listarPrimos(Number, Array)
+DESCRIPTION: Devuelve los 'limit' numeros primos
+*/
+
+function listarPrimos(limit, primos) {
+  for (let i = 0, d = 0; primos.length < limit; i += 2, d = 0) {
+    for (let aux = 3; d < 1 && aux <= Math.sqrt(i); aux += 2) {
+      d += i % aux == 0
+    }
+    d == 0 && primos.push(i)
+  }
+  console.timeEnd('primos')
+  return primos
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 03 | Boolean</title>
+  </head>
+  <body>
+    <script>
+      // Analitza les següents expressions lògiques. Mostra per pantalla el seu valor i raona el seu resultat.
+      //   a) 2 < 12
+      if (2 < 12) {
+        document.write(
+          '<p>(2 < 12): Esto es verdad, porque 2 es menor que 12</p>'
+        )
+      }
+      //   b) 2 < "12"
+      if (2 < '12') {
+        document.write(
+          "<p>(2 < '12'): Esto es verdad, porque javacript transforma el '12' en número y 2 es manor que 12</p>"
+        )
+      }
+      //   c) "2" < "12"
+      if ('2' < '12') {
+      } else {
+        document.write(
+          "<p>('2' < '12'): Esto es falso, porque cualquier cadena de texto es true para javascript y la comparación quedaria true < true y esto es falso</p>"
+        )
+      }
+      //   d) !("2" < "12")
+      if (!('2' < '12')) {
+        document.write(
+          "<p>!('2' < '12'): Esto es verdad, porque la expresion es false y con el ! hacemos la exspresion true</p>"
+        )
+      }
+      //   e) ((2 < "12") && (2 == "2"))
+      if (2 < '12' && 2 == '2') {
+        document.write(
+          "<p>(2 < '12') && (2 == '2'): Esto es verdad, porque javascript al comparar un numero y una cadena texto, transforma a numero el string y 2 es igual a 2 y 2 es menor que 12</p>"
+        )
+      }
+      //   f) (("2" < "12") || (2 < 12))
+      if ('2' < '12' || 2 < 12) {
+        document.write(
+          "<p>('2' < '12') || (2 < 12): Esto es verdad, porque la primera expresion da false y la segunda es verdadero</p>"
+        )
+      }
+      //   g) (('2' < '12') && (2 < 12))
+      if ('2' < '12' && 2 < 12) {
+      } else {
+        document.write(
+          "<p>(('2' < '12') && (2 < 12)): Esto es false, porque la primera expresion da false y en una AND tiene que ser verdadero ambas expresiones</p>"
+        )
+      }
+    </script>
+  </body>
+</html>
