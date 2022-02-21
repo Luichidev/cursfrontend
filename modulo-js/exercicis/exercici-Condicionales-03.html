@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 03 | Condicionales</title>
+</head>
+
+<body>
+  <script>
+    // Quina és la millor estructura de control per diferenciar les funcionalitats de 
+    //les formes de pagament d’una compra, tenint les següents opcions: 
+    //efectiu, codi promocional, tarjeta.
+    //Escriu la estructura de control més adecuada.
+
+    const efectiu = 100
+    const codiPromocional = 'REBAJAS22'
+    const tarjeta = true
+
+    //para controlar las formas de pago usamos un if y un AND.
+    if (efectiu > 0 && codiPromocional === 'REBAJAS22' && tarjeta) {
+      document.write('<p>Su compra se ha realizo con exito! 👍🏽</p>')
+    }
+  </script>
+</body>
+
+</html>

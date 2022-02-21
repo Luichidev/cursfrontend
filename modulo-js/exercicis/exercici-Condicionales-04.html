@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 04 | Condicionales</title>
+</head>
+
+<body>
+  <script>
+    // Per un pagament s’han de donar TOTES les opcions:
+    //   1. Que tingui cash
+    //   2. Que la compra sigui més gran que 100€
+
+    const cash = true
+    const totalCarrito = 90
+
+    if (cash && totalCarrito >= 100) {
+      document.write('<p>Su compra se ha realizo con exito! 👍🏽</p>')
+    } else {
+      document.write('<p>No tienes cash o tu compra es menor a 100€</p>')
+    }
+  </script>
+</body>
+
+</html>
