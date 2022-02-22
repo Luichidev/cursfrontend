@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 08 | Condicionales</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 08 | Condicionales</title>
-</head>
+  <body>
+    <script>
+      // Imagina’t que en la teva botiga tens les següents variables:
+      // let efectivo;
+      // let credito;
+      // let disponible = efectivo + credito;
+      // let totalCarrito;
 
-<body>
-  <script>
-    // Imagina’t que en la teva botiga tens les següents variables: 
-    // let efectivo;
-    // let credito;
-    // let disponible = efectivo + credito;
-    // let totalCarrito;
+      // Programa un codi, que mostri als clients un missatge amb les formes de pagament que té disponibles en funció dels següents escenaris:
+      // escenari 1: “Pots comprar en efectiu o amb crèdit”
+      let efectivo = 1000
+      let credito = 1000
+      let disponible = efectivo + credito
+      let totalCarrito = 700
+      // escenari 2: “Pots comprar fent us d’efectiu i crèdit”
+      // let efectivo = 300;
+      // let credito = 400;
+      // let disponible = efectivo + credito;
+      // let totalCarrito = 700;
+      // escenari 3: “No disposes de saldo disponible per fer la compra”
+      // let efectivo = 300;
+      // let credito = 400;
+      // let disponible = efectivo + credito;
+      // let totalCarrito = 900;
 
-    // Programa un codi, que mostri als clients un missatge amb les formes de pagament que té disponibles en funció dels següents escenaris: 
-    // escenari 1: “Pots comprar en efectiu o amb crèdit” 
-    let efectivo = 1000;
-    let credito = 1000;
-    let disponible = efectivo + credito;
-    let totalCarrito = 700;
-    // escenari 2: “Pots comprar fent us d’efectiu i crèdit” 
-    // let efectivo = 300;
-    // let credito = 400;
-    // let disponible = efectivo + credito;
-    // let totalCarrito = 700;
-    // escenari 3: “No disposes de saldo disponible per fer la compra” 
-    // let efectivo = 300;
-    // let credito = 400;
-    // let disponible = efectivo + credito;
-    // let totalCarrito = 900;
-
-    if (efectivo >= totalCarrito || credito >= totalCarrito) {
-      document.write('<p>Pots comprar en efectiu o amb crèdit 👍🏽</p>')
-    } else if (disponible >= totalCarrito) {
-      document.write('<p>Pots comprar fent us d’efectiu i crèdit 🛒</p>')
-    } else {
-      document.write('<p>No disposes de saldo disponible per fer la compra 😢</p>')
-    }
-
-
-  </script>
-</body>
-
+      if (efectivo >= totalCarrito || credito >= totalCarrito) {
+        document.write('<p>Pots comprar en efectiu o amb crèdit 👍🏽</p>')
+      } else if (disponible >= totalCarrito) {
+        document.write('<p>Pots comprar fent us d’efectiu i crèdit 🛒</p>')
+      } else {
+        document.write(
+          '<p>No disposes de saldo disponible per fer la compra 😢</p>'
+        )
+      }
+    </script>
+  </body>
 </html>

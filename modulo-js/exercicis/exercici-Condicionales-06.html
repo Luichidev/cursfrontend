@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 06 | Condicionales</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 06 | Condicionales</title>
-</head>
+  <body>
+    <script>
+      // Demana una nota(número).Mostra qualificació segons nota:
+      //   0 - 3: Mol deficient
+      //   3 - 5: Insufficient
+      //   5 - 6: Sufficient
+      //   6 - 7: Bé
+      //   7 - 9: Notable
+      //   9 - 10: Excel*lent
 
-<body>
-  <script>
-    // Demana una nota(número).Mostra qualificació segons nota:
-    //   0 - 3: Mol deficient
-    //   3 - 5: Insufficient
-    //   5 - 6: Sufficient
-    //   6 - 7: Bé
-    //   7 - 9: Notable
-    //   9 - 10: Excel*lent
+      let nota = +prompt('Escribe una nota de calificación (Numerica)')
+      if (isNaN(nota) || nota > 10 || nota < 0) {
+        document.write(
+          '<p>La nota debe ser numérica y estar en el rango de 0 a 10</p>'
+        )
+      } else {
+        document.write('<p>Tu nota es: ' + nota + '</p>')
 
-    let nota = +prompt('Escribe una nota de calificación (Numerica)')
-    if (isNaN(nota) || nota > 10) {
-      document.write('<p>La nota debe ser numérica y estar en el rango de 0 a 10</p>')
-    } else {
-      document.write('<p>Tu nota es: ' + nota + '</p>')
-
-      switch (true) {
-        case nota <= 3:
-          document.write('<h3>Mol deficiente</h3>')
-          break;
-        case nota <= 5:
-          document.write('<h3>Insufficient</h3>')
-          break;
-        case nota <= 6:
-          document.write('<h3>Sufficient</h3>')
-          break;
-        case nota <= 7:
-          document.write('<h3>Bé</h3>')
-          break;
-        case nota <= 9:
-          document.write('<h3>Notable</h3>')
-          break;
-        case nota <= 10:
-          document.write('<h3>Excel*lent</h3>')
-          break;
+        switch (true) {
+          case nota < 3:
+            document.write('<h3>Mol deficiente</h3>')
+            break
+          case nota < 5:
+            document.write('<h3>Insufficient</h3>')
+            break
+          case nota < 6:
+            document.write('<h3>Sufficient</h3>')
+            break
+          case nota < 7:
+            document.write('<h3>Bé</h3>')
+            break
+          case nota < 9:
+            document.write('<h3>Notable</h3>')
+            break
+          case nota <= 10:
+            document.write('<h3>Excel*lent</h3>')
+            break
+        }
       }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
