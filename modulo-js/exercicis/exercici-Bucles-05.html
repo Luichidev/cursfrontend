@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 05 | Bucles</title>
+</head>
+
+<body>
+  <script>
+    let frase = prompt('Escribe una frase')
+    // let arrayFrase = frase.split(' ')
+
+    // console.log(arrayFrase)
+    // for (let i = 0; i < arrayFrase.length; i++) {
+    //   const element = arrayFrase[i];
+    //   document.write('<p>' + element + '</p>')
+    // }
+
+    let cadena = ''
+
+    for (let i = 0; i < frase.length; i++) {
+      let char = frase.charAt(i)
+      if (char !== " ") {
+        cadena += char
+      } else {
+        cadena += '<br>'
+        // cadena += '\n'
+      }
+    }
+    document.write('<h2>' + cadena + '</h2>')
+    // console.log(cadena)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 04 | Bucles</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    table,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    let numero = +prompt("Escribe un número")
+    if (isNaN(numero)) {
+      alert('Error: Tiene que escribir un número')
+    } else {
+      let table = '<table><thead>';
+      table += '<tr><th>Tabla del ' + numero + '</th><th>Resultado</th></tr></thead>'
+      for (let i = 1; i <= 10; i++) {
+        table += '<tr>'
+        table += '<td>' + numero + ' x ' + i + ' =</td><td>' + numero * i + '</td>'
+        table += '</tr>'
+      }
+      table += '</table>'
+
+      document.write(table)
+    }
+  </script>
+</body>
+
+</html>
