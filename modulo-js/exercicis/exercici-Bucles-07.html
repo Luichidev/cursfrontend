@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 07 | Bucles</title>
+  </head>
+
+  <body>
+    <script>
+      let frase = 'Hola donde pepito, hola donde jose'
+      let searchChar = 'o'
+      let veces = 0
+
+      for (let i = 0; i < frase.length; i++) {
+        const char = frase.charAt(i)
+        if (char === searchChar) {
+          veces++
+        }
+      }
+
+      document.write('<h1>' + frase + '</h1>')
+      document.write('<h3>Letra: ' + searchChar + '</h3>')
+      document.write('<p>Se repite: ' + veces + ' veces</p>')
+    </script>
+  </body>
+</html>

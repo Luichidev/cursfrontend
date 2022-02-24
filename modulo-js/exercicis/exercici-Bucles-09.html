@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 09 | Bucles</title>
+  </head>
+
+  <body>
+    <script>
+      let nWords = +prompt('Escribe un número de palabras que vas a insertar')
+      let words = ''
+      if (isNaN(nWords)) {
+        alert('Debe ser un número')
+      } else {
+        for (let i = 1; i <= nWords; i++) {
+          words += prompt('Escribe la palabra Nro: ' + i) + '<br>'
+        }
+      }
+
+      document.write('<h3>' + words + '</h3>')
+    </script>
+  </body>
+</html>
