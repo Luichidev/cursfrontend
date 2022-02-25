@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 02 A| Bucles while</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Utilitza la declaració do while de JavaScript per programar un simple joc d'endevinar un número del 1 al 10. Segueix el següent passos:
+      // a. El teu programa calcularà un número secret ( pots fer servir l’objecte Math ) i no l’ha de mostrar per pantalla, ja que l’hauràs d’endevinar.
+      // b. Demana el número que has d’endevinar per pantalla entre 1 i 10 ( fent servir el prompt) .
+      // c. Repeteix el punt anterior, fins que no donis amb el número secret
+      // d. Quan el trobis mostra un missatge per pantalla amb el número d’intents que has fet.
+
+      let secret = Math.floor(Math.random() * 10 + 1)
+      let isLoser = true
+      console.log(secret)
+
+      do {
+        let numero = +prompt('A jugar, Adivinael numero secreto. (1-10)')
+
+        if (isNaN(numero)) {
+          alert('Tiene que ser un número')
+        } else if (secret === numero) {
+          alert('Tú has ganado! 🎉🎉')
+          isLoser = false
+          document.write('<h1>🎉🎉 Ganador! 🎉🎉 </h1>')
+        }
+      } while (isLoser)
+    </script>
+  </body>
+</html>

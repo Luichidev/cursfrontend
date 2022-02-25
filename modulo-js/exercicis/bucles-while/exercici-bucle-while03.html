@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 02 B| Bucles while</title>
+  </head>
+  <body>
+    <script>
+      // Fes un programa que vagi demanant diferents paraules per pantalla ( fes us del prompt ),
+      // quan introdueixis la paraula Fi, deixaràs de demanar més paraules. I mostraràs per pantalla
+      //el número de paraules que has introduït.
+
+      let count = 0
+      let word = ''
+      do {
+        word = prompt('Escriu una palaura, per acabar el programa escriu "Fi"')
+        word = word.toLocaleLowerCase()
+        count++
+        console.log(word)
+      } while (word !== 'fi')
+
+      document.write(
+        '<p> Nro de paraules que has introduït ➡ ' + count + '</p>'
+      )
+    </script>
+  </body>
+</html>

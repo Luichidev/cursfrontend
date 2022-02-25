@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 01 | Bucles while</title>
+  </head>
+  <body>
+    <script>
+      let numero = +prompt('Escribe un número')
+      if (isNaN(numero)) {
+        alert('Tiene que ser un número')
+      } else {
+        let factorial = 1
+        document.write('El factorial de ' + numero + ' es: ')
+
+        while (numero > 1) {
+          factorial *= numero
+          numero--
+        }
+        document.write(factorial)
+      }
+    </script>
+  </body>
+</html>
