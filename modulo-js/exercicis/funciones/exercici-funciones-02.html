@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exerceci 02 | Funciones</title>
+</head>
+
+<body>
+  <script>
+    //Escenari 1.
+    let birthday = '2018-01-10'
+    document.write('<h1>' + calcAge(birthday) + ' años </h1>')
+
+    //Escenari 2.
+    birthday = '2015-04-05'
+    document.write('<h1>' + calcAge(birthday) + ' años </h1>')
+
+    //Escenari 3.
+    birthday = '2022-01-01'
+    document.write('<h1>' + calcAge(birthday) + ' años </h1>')
+
+
+
+
+
+    /////////FUNCIONES////////////
+    /*
+      Author: @Luichidev
+      Web: https://luichi.dev
+      Creation_Date: 28/02/2022
+      Revision: 28/02/2022
+    */
+    // PROTOTYPE: Void calcAge(String birthday).
+    // DESCRIPTION: Te dice que edad tiene 
+
+    function calcAge(birthday) {
+      let today = new Date()
+      let dBirthday = new Date(birthday)
+      years = today.getFullYear() - dBirthday.getFullYear()
+
+      if (dBirthday.getMonth > today.getMonth() || dBirthday.getDate() > today.getDate())
+        years--
+
+      return years
+    }
+
+  </script>
+</body>
+
+</html>

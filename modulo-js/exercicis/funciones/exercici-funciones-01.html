@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exerceci 01 | Funciones</title>
+</head>
+
+<body>
+  <script>
+
+    //Escenari 1.
+    let nom = 'Luis'
+    let cognom = 'Arana'
+    let sexe = 'Home'
+    saludar(nom, cognom, sexe)
+
+    //Escenari 2.
+    nom = 'Sandra'
+    cognom = 'Sarmiento'
+    sexe = 'Dona'
+    saludar(nom, cognom, sexe)
+
+    //Escenari 3.
+    nom = 'Dorian'
+    cognom = 'Fanttini'
+    sexe = ''
+    saludar(nom, cognom, sexe)
+
+
+
+
+
+
+
+    /////////FUNCIONES////////////
+    /*
+      Author: @Luichidev
+      Web: https://luichi.dev
+      Creation_Date: 28/02/2022
+      Revision: 28/02/2022
+    */
+    // PROTOTYPE: Void saludar(String nom, String cognom, String sexe).
+    // DESCRIPTION: Saluda a la persona que ingresa por parametros.
+
+    function saludar(nom, cognom, sexe) {
+
+      if (sexe) {
+        sexe === 'Home'
+          ? document.write('<h1>Benvingut ' + nom + ' ' + cognom + '</h1>')
+          : document.write('<h1>Benvinguda ' + nom + ' ' + cognom + '</h1>')
+      } else {
+        document.write('<h1>Hola ' + nom + ' ' + cognom + '</h1>')
+      }
+    }
+
+  </script>
+</body>
+
+</html>
