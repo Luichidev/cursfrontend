@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 08 | Funciones</title>
+  </head>
+
+  <body>
+    <script>
+      //Fes una funció que donat un número de DNI, calculi si la lletra és correcta. Tingues present que la lletra del DNI es calcula en dos passos:
+      // a. Calcular el mòdul del número del DNI respecte 23
+      // b. El resultat de l’operació anterior ha de correspondre a la posició del següent string:
+
+      var lletres = 'TRWAGMYFPDXBNJZSQVHLCKE'
+
+      //Escenari 1.
+      let dni = '00378324C'
+      document.write('<h1>' + dni + '</h1>')
+      document.write('<h2>' + isRightDni(dni) + '</h2>')
+
+      //Escenari 2.
+      dni = '72234276Q'
+      document.write('<h1>' + dni + '</h1>')
+      document.write('<h2>' + isRightDni(dni) + '</h2>')
+
+      //Escenari 3.
+      dni = '72234276A'
+      document.write('<h1>' + dni + '</h1>')
+      document.write('<h2>' + isRightDni(dni) + '</h2>')
+
+      /////////FUNCIONES////////////
+      /*
+        Author: @Luichidev
+        Web: https://luichi.dev
+        Creation_Date: 01/03/2022
+        Revision: 01/03/2022
+      */
+      // PROTOTYPE: Number getModulo(Number dni).
+      // DESCRIPTION: Devuelve el modulo del dni
+
+      function getModulo(dni) {
+        return dni % 23
+      }
+
+      // PROTOTYPE: String isRightDni(Number dni).
+      // DESCRIPTION: Devuelve Si la letra es correcta del DNI
+
+      function isRightDni(dni) {
+        let modulo = getModulo(dni.slice(0, dni.length - 1))
+        return lletres[modulo] === dni.slice(-1)
+          ? 'Si es correcto 👍'
+          : 'La letra es incorrecta 😌'
+      }
+    </script>
+  </body>
+</html>

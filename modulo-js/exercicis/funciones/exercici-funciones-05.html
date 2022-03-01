@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 05 | Funciones</title>
+  </head>
+
+  <body>
+    <script>
+      // Analitza e investiga les diferencies entre les següents funcions. Aquesta és una pregunta d’entrevista com a JS Developer. (Hoisting)
+      sumar()
+      function sumar() {
+        console.log(2 + 2)
+      }
+
+      sumar2()
+      const sumar2 = function () {
+        console.log(3 + 3)
+      }
+
+      /* Quitando que las funciones suman dos valores, la diferencia esta en la declaración, la primera se declara como function y JavaScript carga en memoria
+      primero las funciones, es decir que da igual donde lo escribas que siempre podrás llamarla (la función) en cualquier parte de tu código.
+      En cambio la segunda funcion se esta guardando en una constante y JavaScript lee el código de arriba hacia abajo y por ello estas funciones 
+      solo se podran llamar despues de haberlas creado. */
+    </script>
+  </body>
+</html>

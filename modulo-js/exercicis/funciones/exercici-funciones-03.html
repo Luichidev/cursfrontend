@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 03 | Funciones</title>
+  </head>
+
+  <body>
+    <script>
+      //Escenari 1.
+      let nun01 = 5
+      let nun02 = 10
+      document.write(
+        '<h1>El menor de ' +
+          nun01 +
+          ' y ' +
+          nun02 +
+          ' es ' +
+          minNun(nun01, nun02) +
+          '</h1>'
+      )
+
+      //Escenari 2.
+      nun01 = 45
+      nun02 = 17
+      document.write(
+        '<h1>El menor de ' +
+          nun01 +
+          ' y ' +
+          nun02 +
+          ' es ' +
+          minNun(nun01, nun02) +
+          '</h1>'
+      )
+
+      //Escenari 3.
+      nun01 = 1
+      nun02 = 100
+      document.write(
+        '<h1>El menor de ' +
+          nun01 +
+          ' y ' +
+          nun02 +
+          ' es ' +
+          minNun(nun01, nun02) +
+          '</h1>'
+      )
+
+      /////////FUNCIONES////////////
+      /*
+        Author: @Luichidev
+        Web: https://luichi.dev
+        Creation_Date: 01/03/2022
+        Revision: 01/03/2022
+      */
+      // PROTOTYPE: Number maxNun(Number nun01, Number nun02).
+      // DESCRIPTION: Te devuelve el menor de dos numeros
+
+      function minNun(nun01, nun02) {
+        return Math.min(nun01, nun02)
+      }
+    </script>
+  </body>
+</html>

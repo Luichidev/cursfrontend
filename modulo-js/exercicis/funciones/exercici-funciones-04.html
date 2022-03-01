@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 04 | Funciones</title>
+  </head>
+
+  <body>
+    <script>
+      //Escenari 1.
+      let frase01 = '"Hola don pepito'
+      let frase02 = 'Hola don José"'
+      document.write('<h1>' + frase01 + ', ' + frase02 + '</h1>')
+      document.write(
+        '<h2>Hay ' + countWords(frase01, frase02) + ' caracteres en total </h2>'
+      )
+
+      //Escenari 2.
+      frase01 = '"Pies para qué os quiero'
+      frase02 = 'Si tengo alas para volar"'
+      document.write('<h1>' + frase01 + ', ' + frase02 + '</h1>')
+      document.write(
+        '<h2>Hay ' + countWords(frase01, frase02) + ' caracteres en total </h2>'
+      )
+
+      //Escenari 3.
+      frase01 = '"Si lo puedes imaginar'
+      frase02 = 'Lo puedes programar"'
+      document.write('<h1>' + frase01 + ', ' + frase02 + '</h1>')
+      document.write(
+        '<h2>Hay ' + countWords(frase01, frase02) + ' caracteres en total </h2>'
+      )
+
+      /////////FUNCIONES////////////
+      /*
+      Author: @Luichidev
+      Web: https://luichi.dev
+      Creation_Date: 01/03/2022
+      Revision: 01/03/2022
+    */
+      // PROTOTYPE: Number countWords(String frase01, String frase02).
+      // DESCRIPTION: Devuelve la cantidad de caracteres de las dos frases
+      //              que le llegan por parametros
+
+      function countWords(frase01, frase02) {
+        return frase01.length + frase02.length
+      }
+    </script>
+  </body>
+</html>

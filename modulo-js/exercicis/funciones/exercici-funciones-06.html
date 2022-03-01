@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 06 | Funciones</title>
+  </head>
+
+  <body>
+    <script>
+      //Escenari 1.
+      let string = 'luichidev@gmail.com'
+      document.write('<h1>String: ' + string + '</h1>')
+      document.write('<h2>' + hasAt(string) + '</h2>')
+
+      //Escenari 2.
+      string = 'https://luichi.dev'
+      document.write('<h1>String: ' + string + '</h1>')
+      document.write('<h2>' + hasAt(string) + '</h2>')
+
+      /////////FUNCIONES////////////
+      /*
+      Author: @Luichidev
+      Web: https://luichi.dev
+      Creation_Date: 01/03/2022
+      Revision: 01/03/2022
+    */
+      // PROTOTYPE: String hasAt(String string).
+      // DESCRIPTION: Devuelve un mensaje si el string contiene el simbolo de @
+
+      function hasAt(string) {
+        return string.search('@') > 0
+          ? '😀 Si esta el signo de @'
+          : '😌 No contiene el simbolo de @'
+      }
+    </script>
+  </body>
+</html>
