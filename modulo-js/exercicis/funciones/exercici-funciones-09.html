@@ -1,84 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exerceci 09 | Funciones</title>
-  </head>
 
-  <body>
-    <script>
-      // Fes un programa amb les seves funcions que determini si un password és segur. Per exemple, un password segur ha de complir les següents condicions:
-      // ● Ha de contenir almenys 8 números.
-      // ● Ha de contenir almenys una majúscula.
-      // ● Ha de contenir almenys una minúscula.
-      // ● Ha de contenir un número.
-      // ● Almenys ha de contenir un caràcter especial.
-      // Pots fer servir una funció per cada comprovació.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Exerceci 09 | Funciones</title>
+</head>
 
-      //Escenari 1.
-      let password = 'sdes140'
-      document.write('<h1>' + password + '</h1>')
-      document.write('<h2>' + isSecure(password) + '</h2>')
+<body>
+  <script>
+    // Fes un programa amb les seves funcions que determini si un password és segur. Per exemple, un password segur ha de complir les següents condicions:
+    // ● Ha de contenir almenys 8 números.
+    // ● Ha de contenir almenys una majúscula.
+    // ● Ha de contenir almenys una minúscula.
+    // ● Ha de contenir un número.
+    // ● Almenys ha de contenir un caràcter especial.
+    // Pots fer servir una funció per cada comprovació.
 
-      //Escenari 2.
+    //Escenari 1.
+    let password = 'sdes140'
+    document.write('<h1>Password: ' + password + '</h1>')
+    document.write('<h2>' + isSecure(password) + '</h2>')
 
-      //Escenari 3.
+    //Escenari 2.
+    password = '!mam4Secu'
+    document.write('<h1>Password: ' + password + '</h1>')
+    document.write('<h2>' + isSecure(password) + '</h2>')
 
-      /////////FUNCIONES////////////
-      /*
-        Author: @Luichidev
-        Web: https://luichi.dev
-        Creation_Date: 01/03/2022
-        Revision: 01/03/2022
-      */
-      // PROTOTYPE: String isSecure(String password).
-      // DESCRIPTION: Devuelve un mensaje si tu password es seguro o no.
+    //Escenari 3.
+    password = 'TODOm#345'
+    document.write('<h1>Password: ' + password + '</h1>')
+    document.write('<h2>' + isSecure(password) + '</h2>')
 
-      function isSecure(password) {
-        if (hasMinChar(password) && hasMajus(password) && hasMinus(password)) {
-          return 'Tu password es seguro 🔐'
+    /////////FUNCIONES////////////
+    /*
+      Author: @Luichidev
+      Web: https://luichi.dev
+      Creation_Date: 01/03/2022
+      Revision: 01/03/2022
+    */
+    // PROTOTYPE: String isSecure(String password).
+    // DESCRIPTION: Devuelve un mensaje si tu password es seguro o no.
+
+    function isSecure(password) {
+      if (hasMinChar(password) && hasMajus2(password) && hasMinus2(password) && hasNumber2(password) && hasSpecialChar2(password)) {
+        return 'Tu password es seguro 🔐'
+      }
+
+      return 'Tu password no es seguro 🛑'
+    }
+
+    // PROTOTYPE: Boolean hasMinChar(String password).
+    // DESCRIPTION: Devuelve true si el string es mayor a 8 caracteres
+
+    function hasMinChar(password) {
+      return password.length > 7
+    }
+
+    // PROTOTYPE: Boolean hasMajus(String password).
+    // DESCRIPTION: Devuelve true si el string contiene al menos una letra mayuscula.
+
+    // v.1
+    function hasMajus(password) {
+
+      for (let i = 0; i < password.length; i++) {
+        if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90) {
+          return true
         }
-
-        return 'Tu password no es seguro 🛑'
       }
+      return false
+    }
+    // v.2
+    function hasMajus2(password) {
+      return password.match(/([A-Z])/g)
+    }
 
-      // PROTOTYPE: Boolean hasMinChar(String password).
-      // DESCRIPTION: Devuelve true si el string es mayor a 8 caracteres
+    // PROTOTYPE: Boolean hasMinus(String password).
+    // DESCRIPTION: Devuelve true si el string contiene al menos una letra minuscula.
 
-      function hasMinChar(password) {
-        return password.length > 7
-      }
-
-      // PROTOTYPE: Boolean hasMajus(String password).
-      // DESCRIPTION: Devuelve true si el string contiene una letra mayuscula.
-
-      function hasMajus(password) {
-        let res = false
-        for (let i = 0; i < password.length; i++) {
-          if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90) {
-            res = true
-          }
+    // v.1
+    function hasMinus(password) {
+      let res = false
+      for (let i = 0; i < password.length; i++) {
+        if (password.charCodeAt(i) >= 97 && password.charCodeAt(i) <= 122) {
+          return true
         }
-        return res
       }
+      return false
+    }
 
-      // PROTOTYPE: Boolean hasMinus(String password).
-      // DESCRIPTION: Devuelve true si el string contiene una letra minuscula.
+    // v.2
+    function hasMinus2(password) {
+      return password.match(/([a-z])/g)
+    }
 
-      function hasMinus(password) {
-        let res = false
-        for (let i = 0; i < password.length; i++) {
-          if (password.charCodeAt(i) >= 97 && password.charCodeAt(i) <= 122) {
-            res = true
-          }
+    // PROTOTYPE: Boolean hasNumber(String password).
+    // DESCRIPTION: Devuelve true si el string contiene al menos un numero
+
+    // v.1
+    function hasNumber(password) {
+      for (let i = 0; i < password.length; i++) {
+        if (!isNaN(password.charAt(i))) {
+          return true
         }
-        return res
       }
-    </script>
-  </body>
+      return false
+    }
+
+    // v.2
+    function hasNumber2(password) {
+      return password.match(/([0-9])/g)
+    }
+
+    // PROTOTYPE: Boolean hasSpecialChar(String password).
+    // DESCRIPTION: Devuelve true si el string contiene al menos un caracter especial.
+
+    // v.1
+    function hasSpecialChar(password) {
+      let res = false
+      for (let i = 0; i < password.length; i++) {
+        if (password.charCodeAt(i) >= 33 && password.charCodeAt(i) <= 39) {
+          return true
+        }
+      }
+      return false
+    }
+
+    // v.2
+    function hasSpecialChar2(password) {
+      return password.match(/([!-'])/g)
+    }
+  </script>
+</body>
+
 </html>
