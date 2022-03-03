@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 03 | Object</title>
+  </head>
+  <body>
+    <script>
+      // Crea l’objecte carList, que per defecte està buit. Accedeix a l’objecte.
+      const carList = [
+        {
+          id: 1,
+          producto: {
+            id: 1,
+            name: 'Zapatilla futbol',
+            price: 57,
+            type: 'Deportes',
+          },
+        },
+        {
+          id: 2,
+          producto: {
+            id: 2,
+            name: 'Sombra de noche',
+            price: 25,
+            type: 'Maquillaje',
+          },
+        },
+      ]
+
+      console.log(Object.entries(carList))
+
+      document.write(`<ul>`)
+      carList.map((ele) => {
+        document.write(
+          `<li>${ele.producto.name} Precio: ${ele.producto.price}€</li>`
+        )
+      })
+      document.write(`</ul>`)
+    </script>
+  </body>
+</html>

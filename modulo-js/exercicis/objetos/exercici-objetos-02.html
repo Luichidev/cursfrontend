@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 02 | Object</title>
+  </head>
+  <body>
+    <script>
+      // Defineix l’objecte subTotal, amb un únic atribut que serà el type del objecte producte.
+      // Aquest tipus tindrà un objecte aniuat que tindrà els atributs value, quantitat i discount. Assignali valors.
+      // Accedeix als atributs value, quantitat i discount, per un tipus concret.
+      const subTotal = {
+        Deportes: {
+          value: 10,
+          cantidad: 1,
+          descuento: 5,
+        },
+      }
+
+      document.write(`<h1>Valor: ${subTotal.Deportes.value}</h1>`)
+      document.write(`<h1>Cantidad: ${subTotal.Deportes.cantidad}</h1>`)
+      document.write(`<h1>descuento: ${subTotal.Deportes.descuento}%</h1>`)
+    </script>
+  </body>
+</html>
