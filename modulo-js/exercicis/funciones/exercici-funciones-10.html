@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 10 | Funciones</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Exerceci 10 | Funciones</title>
-  <style>
-    h1 {
-      text-align: center;
-    }
+      span {
+        font-family: 'Captcha code', 'Dead Kansas', 'Franklin Gothic Medium',
+          'Arial Narrow';
+        font-size: 3.2rem;
+        font-weight: 700;
+        border: 1px solid #5757be;
+        background-color: #5757be;
+        padding: 8px;
+      }
+    </style>
+  </head>
 
-    span {
-      font-family: 'Dead Kansas', 'Franklin Gothic Medium', 'Arial Narrow';
-      font-size: 3.2rem;
-      font-weight: 700;
-    }
-  </style>
-</head>
+  <body>
+    <script>
+      // Simula un Captcha senzill de 5 caràcters(amb lletres minúscules i números) amb JAVASCRIPT.
+      // El captcha el pots generar fent ús random i de la següent variable: var captchaChars = "1234567890abcdefghijklmnopqrst"; // Random captchaChars.length
+      // Pots implementar una funció que generi el captcha i un altre que el validi.
 
-<body>
-  <script>
-    // Simula un Captcha senzill de 5 caràcters(amb lletres minúscules i números) amb JAVASCRIPT.
-    // El captcha el pots generar fent ús random i de la següent variable: var captchaChars = "1234567890abcdefghijklmnopqrst"; // Random captchaChars.length
-    // Pots implementar una funció que generi el captcha i un altre que el validi.
+      let captchaChars = '1234567890abcdefghijklmnopqrst'
+      let sizeCaptcha = 5
 
-    let captchaChars = "1234567890abcdefghijklmnopqrst"
-    let sizeCaptcha = 5
+      document.write(
+        '<h1>Captcha: <span>' +
+          randomCaptcha(sizeCaptcha, captchaChars) +
+          '</span> 🔐</h1>'
+      )
 
-    document.write('<h1>Captcha: <span>' + randomCaptcha(5, captchaChars) + '</span> 🔐</h1>')
-
-
-    /////////FUNCIONES////////////
-    /*
+      /////////FUNCIONES////////////
+      /*
       Author: @Luichidev
       Web: https://luichi.dev
       Creation_Date: 02/03/2022
       Revision: 02/03/2022
     */
-    // PROTOTYPE: String randomCaptcha(Number size, String letters).
-    // DESCRIPTION: Devuelve un mensaje con un captcha del tamaño de la variable size.
-    //  utilizando la cadena pasada por parametro letters
+      // PROTOTYPE: String randomCaptcha(Number size, String letters).
+      // DESCRIPTION: Devuelve un mensaje con un captcha del tamaño de la variable size.
+      //  utilizando la cadena pasada por parametro letters
 
-    function randomCaptcha(size, letters) {
-      let res = ''
-      for (let i = 0; i < 5; i++) {
-        let random = Math.floor(Math.random() * letters.length)
-        res += letters[random]
+      function randomCaptcha(size, letters) {
+        let res = ''
+        for (let i = 0; i < size; i++) {
+          let random = Math.floor(Math.random() * letters.length)
+          res += letters[random]
+        }
+
+        return res
       }
-
-      return res
-    }
-
-
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exerceci 07 | Funciones</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Exerceci 07 | Funciones</title>
-</head>
+  <body>
+    <script>
+      let frase = 'El futuro pertenece a los que se atreves a soñar'
+      document.write('<h1>Frase: ' + frase + '</h1>')
 
-<body>
-  <script>
-    let frase = 'El futuro pertenece a los que se atreves a soñar.'
-    document.write('<h1>Frase: ' + frase + '</h1>')
+      document.write(
+        'a).- Funció per Imprimir la primera meitat dels caràcters de la cadena.'
+      )
+      document.write('<h2>' + middleSlice(frase) + '</h2>')
 
-    document.write(
-      'a).- Funció per Imprimir la primera meitat dels caràcters de la cadena.'
-    )
-    document.write('<h2>' + middleSlice(frase) + '</h2>')
+      document.write('b).- Funció per Imprimir el darrer caràcter.')
+      document.write('<h2>El último caracter es ' + lastChar(frase) + '</h2>')
 
-    document.write('b).- Funció per Imprimir el darrer caràcter.')
-    document.write('<h2>El último caracter es ' + lastChar(frase) + '</h2>')
+      document.write('c).- Funció per Imprimir-ho en forma inversa.')
+      document.write('<h2>' + invQuote(frase) + '</h2>')
 
-    document.write('c).- Funció per Imprimir-ho en forma inversa.')
-    document.write('<h2>' + invQuote(frase) + '</h2>')
+      document.write(
+        'd).- Funció per Imprimir cada caràcter del String separat amb un guió.'
+      )
+      document.write('<h2>' + addHyphen(frase) + '</h2>')
 
-    document.write(
-      'd).- Funció per Imprimir cada caràcter del String separat amb un guió.'
-    )
-    document.write('<h2>' + addHyphen(frase) + '</h2>')
+      document.write(
+        'e).- Funció per Imprimir la quantitat de vocals sense accents emmagatzemades.'
+      )
+      document.write('<h2> Hay ' + countVowels(frase) + ' vocales</h2>')
 
-    document.write(
-      'e).- Funció per Imprimir la quantitat de vocals sense accents emmagatzemades.'
-    )
-    document.write('<h2> Hay ' + countVowels(frase) + ' vocales</h2>')
-
-    /////////FUNCIONES////////////
-    /*
+      /////////FUNCIONES////////////
+      /*
     Author: @Luichidev
     Web: https://luichi.dev
     Creation_Date: 01/03/2022
     Revision: 01/03/2022
   */
-    // PROTOTYPE: String middleSlice(String frase).
-    // DESCRIPTION: Devuelve un string con la mitad de caracteres de una frase
+      // PROTOTYPE: String middleSlice(String frase).
+      // DESCRIPTION: Devuelve un string con la mitad de caracteres de una frase
 
-    function middleSlice(frase) {
-      middle = Math.ceil(frase.length / 2)
-      frase = frase.slice(0, middle)
-      return frase
-    }
+      function middleSlice(frase) {
+        middle = Math.ceil(frase.length / 2)
+        frase = frase.slice(0, middle)
+        return frase
+      }
 
-    // PROTOTYPE: String lastChar(String frase).
-    // DESCRIPTION: Devuelve el último caracter de la frase.
+      // PROTOTYPE: String lastChar(String frase).
+      // DESCRIPTION: Devuelve el último caracter de la frase.
 
-    function lastChar(frase) {
-      return frase.slice(-1)
-    }
+      function lastChar(frase) {
+        return frase.slice(-1)
+      }
 
-    // PROTOTYPE: String invQuote(String frase).
-    // DESCRIPTION: Devuelve la frase invertida.
+      // PROTOTYPE: String invQuote(String frase).
+      // DESCRIPTION: Devuelve la frase invertida.
 
-    function invQuote(frase) {
-      return frase.split('').reverse().join('')
-    }
+      function invQuote(frase) {
+        return frase.split('').reverse().join('')
+      }
 
-    // PROTOTYPE: String addHyphen(String frase).
-    // DESCRIPTION: Devuelve la frase separada por guiones.
+      // PROTOTYPE: String addHyphen(String frase).
+      // DESCRIPTION: Devuelve la frase separada por guiones.
 
-    function addHyphen(frase) {
-      return frase.split('').join('-')
-    }
+      function addHyphen(frase) {
+        let res = ''
+        let words = frase.split(' ')
 
-    // PROTOTYPE: String countVowels(String frase).
-    // DESCRIPTION: Devuelve la cantidad de vocales de una frase.
+        for (let i = 0; i < words.length; i++) {
+          res += words[i].split('').join('-') + '-'
+        }
+        return res
 
-    function countVowels(frase) {
-      return frase.match(/[aeiou]/gi).length
-    }
-  </script>
-</body>
+        // return frase.split('').join('-')
+      }
 
+      // PROTOTYPE: String countVowels(String frase).
+      // DESCRIPTION: Devuelve la cantidad de vocales de una frase.
+
+      function countVowels(frase) {
+        return frase.match(/[aeiou]/gi).length
+      }
+    </script>
+  </body>
 </html>
