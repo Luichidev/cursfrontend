@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 05 | Arrays</title>
+</head>
+
+<body>
+  <script>
+    // Per fer a casa. 
+    // Crea una funció que rebi un array de 5 noms com a paràmetre i retoni l’índex del nom més 
+    // llarg (el programa “principal” haurà d’imprimir per consola el nom).
+
+    const names1 = ['Luis', 'Sandra', 'Tania', 'Alma', 'Dorian']
+    console.log('Array de nombres => ' + names1);
+    console.log('Nombre más largo es => ' + longNameToArray(names1));
+
+    /////////FUNCIONES////////////
+    /*
+          Author: @Luichidev
+          Web: https://luichi.dev
+          Creation_Date: 04/03/2022
+          Revision: 04/03/2022
+        */
+    // PROTOTYPE: String longNameToArray(Array array).
+    // DESCRIPTION: Devuelve el nombre mas largo del array de nombres
+
+    function longNameToArray(array) {
+      let res = ''
+      let long = 0
+      if (Array.isArray(array)) {
+        for (let i = 0; i < array.length; i++) {
+          const ele = array[i]
+          if (ele.length > long) {
+            res = ele
+            long = ele.length
+          }
+        }
+      }
+      return res
+    }
+  </script>
+</body>
+
+</html>
