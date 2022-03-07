@@ -21,35 +21,36 @@
       { nombre: 'Bocinas', precio: 300 },
       { nombre: 'Laptop', precio: 800 },
     ]
-    // a) Mostras tots els productes
+    console.log('a) Mostras tots els productes');
     console.table(carrito)
 
-    // b) Mostrar els productes de més de 300€.
+    console.log('b) Mostrar els productes de més de 300€.');
     const mes300 = carrito.filter((el) => el.precio > 300)
     console.table(mes300)
 
-    // c) Mostrar el total a pagar del carrito. (hem de sumar tots els preus.)
+    console.log('c) Mostrar el total a pagar del carrito. (hem de sumar tots els preus.)');
     let res = 0
     const total = sumTokeys(carrito, 'precio')
     console.log(`La suma de todos los precios es => ${total}`)
 
-    // d) Obtenir nous carritos, tenint en compte les següents condicions:
-    // 1. Carrito con Productos con precio > 400
+    console.log('d) Obtenir nous carritos, tenint en compte les següents condicions:');
+    console.log('a. Carrito con Productos con precio > 400');
     const carrito400 = carrito.filter((el) => el.precio > 400)
     console.table(carrito400);
+    console.table(customFilterPriceMayor(carrito, 400));
 
-    // 2. Carrito con Productos con el nombre ‘Celular'
+    console.log('b. Carrito con Productos con el nombre ‘Celular');
     const carritoCelular = carrito.filter((el) => el.nombre === 'Celular')
     console.table(carritoCelular);
 
-    // 3. Carrito con todos los excepto ‘Laptop
+    console.log('c. Carrito con todos los excepto ‘Laptop');
     const carritoNoLaptop = carrito.filter((el) => el.nombre !== 'Laptop')
     console.table(carritoNoLaptop);
 
-    // e) Comprova que en el carrito no hi hagi algun preu = 0
+    console.log('e) Comprova que en el carrito no hi hagi algun preu = 0');
     carrito.find((el) => el.precio === 0)
-      ? console.log('Hay un producto con el precio = 0')
-      : console.log('No hay ningun producto con el precio = 0');
+      ? console.log('Hi ha un producte amb el preu = 0')
+      : console.log('No hi ha cap producte amb el preu = 0');
 
     /////////FUNCIONES////////////
     /*
@@ -67,6 +68,20 @@
         total += array[i][key];
       }
       return total
+    }
+
+    // PROTOTYPE: Array customFilterPriceMayor(Array array, String condicion).
+    // DESCRIPTION: Devuelve un array con los elementos filtrados por la condicion pasada por parametro
+
+    function customFilterPriceMayor(array, condicion) {
+      let res = []
+      for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element.precio > condicion) {
+          res.push(element)
+        }
+      }
+      return res
     }
   </script>
 </body>

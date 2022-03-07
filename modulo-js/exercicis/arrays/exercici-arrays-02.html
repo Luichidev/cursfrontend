@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercici 02 | Arrays</title>
-  </head>
-  <body>
-    <script>
-      // Crea una funció que rebi un array de 5 noms com a paràmetre i retorni
-      // un nou array amb el número de caràcters de cada nom.
 
-      // Escenari 1
-      const names1 = ['Luis', 'Sandra', 'Tania', 'Alma', 'Dorian']
-      console.log(names1)
-      console.log(
-        `nuevo array con la cantidad de caracteres de cada nombre => ${countElemChar(
-          names1
-        )}`
-      )
-      // Escenari 2
-      const names2 = ['Olegario', 'Laura', 'Raul', 'Ignasi', 'Manuel']
-      console.log(names2)
-      console.log(
-        `nuevo array con la cantidad de caracteres de cada nombre => ${countElemChar(
-          names2
-        )}`
-      )
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 02 | Arrays</title>
+</head>
 
-      /////////FUNCIONES////////////
-      /*
-      Author: @Luichidev
-      Web: https://luichi.dev
-      Creation_Date: 04/03/2022
-      Revision: 04/03/2022
-    */
-      // PROTOTYPE: Array countElemChar(Number min, Number max).
-      // DESCRIPTION: Devuelve un array con el numero de caracteres de cada nombre
-      //  que viene dato en un array
+<body>
+  <script>
+    // Crea una funció que rebi un array de 5 noms com a paràmetre i retorni
+    // un nou array amb el número de caràcters de cada nom.
 
-      function countElemChar(array) {
-        let res = []
-        if (Array.isArray(array)) {
-          for (let i = 0; i < array.length; i++) {
-            const ele = array[i]
-            res.push(ele.length)
-          }
+    // Escenari 1
+    const names1 = ['Luis', 'Sandra', 'Tania', 'Alma', 'Dorian']
+    console.table(names1)
+    console.log(
+      `nuevo array con la cantidad de caracteres de cada nombre => ${countElemChar(
+        names1
+      )}`
+    )
+    // Escenari 2
+    const names2 = ['Olegario', 'Laura', 'Raul', 'Ignasi', 'Manuel']
+    console.table(names2)
+    console.log(
+      `nuevo array con la cantidad de caracteres de cada nombre => ${countElemChar(
+        names2
+      )}`
+    )
+
+    /////////FUNCIONES////////////
+    /*
+    Author: @Luichidev
+    Web: https://luichi.dev
+    Creation_Date: 04/03/2022
+    Revision: 04/03/2022
+  */
+    // PROTOTYPE: Array countElemChar(Number min, Number max).
+    // DESCRIPTION: Devuelve un array con el numero de caracteres de cada nombre
+    //  que viene dato en un array
+
+    function countElemChar(array) {
+      let res = []
+      if (Array.isArray(array)) {
+        for (let i = 0; i < array.length; i++) {
+          const ele = array[i]
+          res.push(ele.length)
         }
-        return res
       }
-    </script>
-  </body>
+      return res
+    }
+  </script>
+</body>
+
 </html>

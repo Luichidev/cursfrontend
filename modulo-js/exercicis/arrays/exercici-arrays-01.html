@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercici 01 | Arrays</title>
-  </head>
-  <body>
-    <script>
-      // Funció que rebi dos nombres i retorni un array amb tots els nombres compresos entre ells.
-      // El programa principal ha de mostrar aquest array per consola.
 
-      // Escenari 1
-      console.log(`num1: 20, num2: 50 => ${minMaxArray(20, 50)}`)
-      // Escenari 2
-      console.log(`num1: 15, num2: 15 => ${minMaxArray(15, 15)}`)
-      // Escenari 3
-      console.log(`num1: 25, num2: 15 => ${minMaxArray(25, 15)}`)
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 01 | Arrays</title>
+</head>
 
-      /////////FUNCIONES////////////
-      /*
-      Author: @Luichidev
-      Web: https://luichi.dev
-      Creation_Date: 04/03/2022
-      Revision: 04/03/2022
-    */
-      // PROTOTYPE: Array minMaxArray(Number min, Number max).
-      // DESCRIPTION: Devuelve un array con los números comprendidos
-      //  entre min y max pasados por parametros
+<body>
+  <script>
+    // Funció que rebi dos nombres i retorni un array amb tots els nombres compresos entre ells.
+    // El programa principal ha de mostrar aquest array per consola.
 
-      function minMaxArray(min, max) {
-        let res = []
-        if (min === max) {
-          return [min]
-        }
+    // Escenari 1
+    console.log(`num1: 20, num2: 50 => ${serieNumerica(20, 50)}`)
 
-        if (min < max) {
-          for (let i = min; i <= max; i++) {
-            res.push(i)
-          }
-        } else {
-          for (let i = max; i <= min; i++) {
-            res.push(i)
-          }
-        }
+    // Escenari 2
+    console.log(`num1: 15, num2: 15 => ${serieNumerica(15, 15)}`)
 
+    // Escenari 3
+    console.log(`num1: 25, num2: 15 => ${serieNumerica(25, 15)}`)
+
+    /////////FUNCIONES////////////
+    /*
+    Author: @Luichidev
+    Web: https://luichi.dev
+    Creation_Date: 04/03/2022
+    Revision: 04/03/2022
+  */
+    // PROTOTYPE: Array serieNumerica(Number num1, Number num2).
+    // DESCRIPTION: Devuelve un array con los números comprendidos
+    //  entre num1 y num2 pasados por parametros
+
+    function serieNumerica(num1, num2) {
+      let res = []
+      if (num1 === num2) {
         return res
       }
-    </script>
-  </body>
+
+      if (num1 < num2) {
+        for (let i = num1; i < num2; i++) {
+          res.push(i)
+        }
+      } else {
+        for (let i = num1; i > num2; i--) {
+          res.push(i)
+        }
+      }
+
+      return res
+    }
+  </script>
+</body>
+
 </html>
