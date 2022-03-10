@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercise | JavaScript Moderno</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="excercise-em6-01">Inicio</a></li>
+        <li><a href="excercise-em6-02">Exercici 02</a></li>
+        <li><a href="excercise-em6-03">Exercici 03</a></li>
+        <li><a href="excercise-em6-04">Exercici 04</a></li>
+        <li><a href="excercise-em6-05">Exercici 05</a></li>
+        <li><a href="excercise-em6-06">Exercici 06</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Exercicis</h1>
+      <p>
+        Una empresa del sector audiovisual ens ha demanat una aplicació web, que
+        li permeti als seus empleats trobar ràpidament pel·lícules d'una gran
+        base de dades que posseeixen, perquè el procés actualment es realitza de
+        manera manual. Seràs l'encarregat de muntar el core de l'aplicació: tota
+        la lògica de filtrat i ordenament de pel·lícules.
+      </p>
+      <ul>
+        <li>
+          Et deixo l’arxiu src/data.js al meu git, amb les dades de les
+          pel·lícules amb les que faràs els exercicis. Té el format d’un json,
+          perquè et vagis familiaritzant. En el arxiu tens un array de 250
+          pel·lícules. Cada element de l'array és un objecte que conté la
+          informació de cada pel·lícula.
+        </li>
+        <li>
+          La lògica a implementar l'hauràs de posar en l'arxiu src/films.js,
+          fent servir funcions.
+        </li>
+        <li>
+          En l’html, pots fer la simulació del carret, fent les crides a les
+          funcions del fitxer films.js
+        </li>
+      </ul>
+      <h2>Exercici 1</h2>
+      <p>
+        Has de mostrar per pantalla a l'usuari/ària només els directors de les
+        pel·lícules. Per obtenir l'array de directors/es, has de crear la funció
+        getAllDirectors().
+      </p>
+      <ul>
+        <script>
+          document.write(getAllDirectors())
+        </script>
+      </ul>
+    </main>
+  </body>
+</html>
