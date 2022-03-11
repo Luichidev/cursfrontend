@@ -3,7 +3,7 @@
   Author: @Luichidev
   Web: https://luichi.dev
   Creation_Date: 09/03/2022
-  Revision: 09/03/2022
+  Revision: 11/03/2022
 */
 
 // PROTOTYPE: Void buy(Number id).
@@ -24,15 +24,14 @@ function cleanCart() {
 // DESCRIPTION: Calcula el subtotal de cada producto
 
 function subTotal() {
-  const keysSub = Object.keys(subtotal)
   let cartSub = [],
     sum = []
 
-  keysSub.forEach((ele) => {
+  for (const ele in subtotal) {
     cartSub[ele] = cartList.filter((pro) => pro.type === ele)
     sum[ele] = sumTokeys(cartSub[ele], 'price')
     subtotal[ele].value = sum[ele]
-  })
+  }
 }
 
 // PROTOTYPE: Array sumTokeys(Array array, String key).
