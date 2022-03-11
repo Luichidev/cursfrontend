@@ -30,13 +30,7 @@ function subTotal() {
 
   keysSub.forEach((ele) => {
     cartSub[ele] = cartList.filter((pro) => pro.type === ele)
-  })
-
-  keysSub.forEach((ele) => {
     sum[ele] = sumTokeys(cartSub[ele], 'price')
-  })
-
-  keysSub.forEach((ele) => {
     subtotal[ele].value = sum[ele]
   })
 }
