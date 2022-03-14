@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Excercise 04 | JavaScript Moderno</title>
+  <title>Excercise 05 | JavaScript Moderno</title>
   <link rel="stylesheet" href="./css/style.css" />
   <script src="./js/data.js"></script>
   <script src="./js/index.js"></script>
@@ -24,16 +24,16 @@
     </ul>
   </nav>
   <main>
-    <h2>Exercici 4</h2>
+    <h2>Exercici 5</h2>
     <p>
-      Ara implementaràs la lògica per a ordenar les pel·lícules, part
-      fonamental en qualsevol eina de visualització de dades.
+      Ja només et falta una segona funció que ordeni les pel·lícules.
     </p>
     <p>
-      En aquest apartat, hauràs de crear una funció, que rebent un array de
-      pel·lícules, el retorni ordenat alfabèticament per títol. Només s'han de
-      retornar les 20 primeres pel·lícules ordenades.
+      En aquesta ocasió, hauràs d'implementar una funció que rebent un array de pel·lícules, retorna un array de
+      pel·lícules ordenades per any.
     </p>
+    <p>Com podràs observar, hi ha moltes pel·lícules que coincideixen en un mateix any. Per a ordenar aquestes
+      pel·lícules que tenen el mateix any, s'ha de fer per ordre alfabètic del títol.</p>
     <table>
       <thead>
         <tr>
@@ -44,7 +44,7 @@
       <tbody id='tableBody'></tbody>
     </table>
     <script>
-      const movieList = getOrderedMovies(movies, "title", 20)
+      const movieList = getOrderedMovies(movies, "year", 20)
       let acum = "";
       movieList.forEach(ele => {
         acum += `<tr><td>${ele.title}</td><td>${ele.year}</td></tr>`

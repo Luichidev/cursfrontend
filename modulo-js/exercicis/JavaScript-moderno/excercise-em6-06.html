@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Excercise 02 | JavaScript Moderno</title>
+  <title>Excercise 06 | JavaScript Moderno</title>
   <link rel="stylesheet" href="./css/style.css" />
   <script src="./js/data.js"></script>
   <script src="./js/index.js"></script>
@@ -24,32 +24,30 @@
     </ul>
   </nav>
   <main>
-    <h2>Exercici 2</h2>
+    <h2>Exercici 6</h2>
     <p>
-      Una altra funcionalitat necessària és mostrar les pel·lícules per a un
-      determinat director/ora. Per a això, hauràs de crear una funció
-      getPelisFromDirector().
+      Ja estàs arribant al final, només fa falta implementar una última funcionalitat!
     </p>
     <p>
-      Aquesta funció ha de rebre com a paràmetre el/la director/ora per al
-      qual es volen buscar les seves pel·lícules, i retorna l'array de
-      pel·lícules que ha dirigit.
+      Els usuaris/àries necessiten saber quina pel·lícula és la millor de cada any. Per dur a terme aquesta
+      funcionalitat, hauràs de crear una funció que accepti l'any, i retorni la millor pel·lícula d'aquest any.
     </p>
-    <label for="search">Buscar por director</label>
-    <input type="text" id="search" />
-    <button id="btnSearch">Buscar</button>
-    <ul id="show"></ul>
+    <p>
+      Per aquest exemple veurem quines han estat les millors pel·lícules de l'any 2006.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Mejor pelicula</th>
+          <th>Año</th>
+        </tr>
+      </thead>
+      <tbody id='tableBody'></tbody>
+    </table>
     <script>
-      btnSearch.onclick = () => {
-        let find = search.value
-        let key = 'director'
-        let movieList = getPelisFrom(movies, key, find)
-        let res = ''
-        for (let item of movieList) {
-          res += `<li>${item.title}</li>`
-        }
-        show.innerHTML = res
-      }
+      const bestMovies = getBestMoviesToYear(movies, "2006")
+      console.log(bestMovies)
+      tableBody.innerHTML = `<tr><td>${bestMovies[0].title}</td><td>${bestMovies[0].year}</td></tr>`
     </script>
   </main>
 </body>
