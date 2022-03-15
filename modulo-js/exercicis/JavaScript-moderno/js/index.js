@@ -21,17 +21,17 @@ const averageToKey = (array, key) => {
 //             y por la direction pasados por parametros
 const sortBy = (array, type, direction = 'asc') => {
   if (direction.toLowerCase() === 'desc') {
-    return array.sort((a, b) => a[type] < b[type])
+    return array.sort((a, b) => (a[type] < b[type] ? -1 : 1))
   } else {
-    return array.sort((a, b) => a[type] > b[type])
+    return array.sort((a, b) => (a[type] > b[type] ? 1 : -1))
   }
 }
 
-// PROTOTYPE: Set getAllBy(Array array, String find).
-// DESCRIPTION: Recibe un array y devuelve un array Set con todos los elementos buscados.
+// PROTOTYPE: Array getAllBy(Array array, String find).
+// DESCRIPTION: Recibe un array y devuelve un array con todos los elementos buscados.
 const getAllBy = (array, find) => {
   const res = array.map((ele) => ele[find])
-  return new Set(res)
+  return res
 }
 
 // PROTOTYPE: Set getAllByDirectors().
