@@ -1,4 +1,4 @@
-console.log('Exercises 08: CREAR UNA NOVA CARD')
+console.log('Exercises 09: CREAR UNA NOVA CARD')
 //Contenidor
 const cardContainer = document.querySelector('.contenedor-cards')
 

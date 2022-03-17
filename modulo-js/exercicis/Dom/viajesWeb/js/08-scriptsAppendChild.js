@@ -4,5 +4,4 @@ console.log(
 
 const nouLink = document.createElement('a')
 nouLink.textContent = 'Nou Vender'
-const contenidor = document.querySelector('nav.navegacion')
-contenidor.appendChild(nouLink)
+console.log(fatherNav.appendChild(nouLink))
