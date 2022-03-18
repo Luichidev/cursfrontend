@@ -34,4 +34,5 @@ fatherDiv.appendChild(fillImg)
 fatherDiv.appendChild(fillDiv)
 
 //Afegir el nou nodo card al contenidor
-cardContainer.appendChild(fatherDiv)
+// cardContainer.appendChild(fatherDiv)
+cardContainer.prepend(fatherDiv)
