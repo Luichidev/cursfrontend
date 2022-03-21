@@ -44,3 +44,14 @@ function sumTokeys(array, key) {
   }
   return total
 }
+
+function createSubTotal() {
+  const model = {
+    value: 0,
+    discount: 0,
+  }
+
+  products.forEach((producto) => {
+    subtotal[producto.type] = model
+  })
+}

@@ -60,17 +60,4 @@ var cart = []
 // Array de la llista de la compra
 var cartList = []
 
-var subtotal = {
-  grocery: {
-    value: 0,
-    discount: 0,
-  },
-  beauty: {
-    value: 0,
-    discount: 0,
-  },
-  clothes: {
-    value: 0,
-    discount: 0,
-  },
-}
+var subtotal = {}

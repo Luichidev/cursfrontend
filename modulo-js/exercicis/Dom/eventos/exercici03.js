@@ -7,6 +7,13 @@
 
 const buscador = document.querySelector('form#formulario > .busqueda')
 
-buscador.addEventListener('keypress', (e) => {
+buscador.addEventListener('keyup', (e) => {
   console.log(e.target.value)
+})
+
+buscador.addEventListener('input', (e) => {
+  let inputSearch = e.target.value
+  if (inputSearch.includes('a')) {
+    console.log('Letra a')
+  }
 })
