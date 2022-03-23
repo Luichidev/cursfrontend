@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', (e) => {
+  fillCards()
+})
+
 let count = 0
 const cards = document.querySelectorAll('.cardProduct')
 
@@ -31,4 +35,14 @@ function addToCart(cardId) {
 function removeFromCart(cardId) {
   const { name } = products.find(({ id }) => id === +cardId)
   alert('remove to cart => ' + name)
+}
+
+function fillCards() {
+  products.forEach((ele) => {
+    const card = document.querySelector('#card' + ele.id)
+    card.querySelector('.card img').setAttribute('src', ele.img)
+    card.querySelector('.card-body a').textContent = ele.name
+    card.querySelector('.card-body p').textContent = ele.price + ' €'
+    card.querySelector('.card-body ul li i').textContent = `- ${ele.type} -`
+  })
 }
