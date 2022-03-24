@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body {
+	font-family: Poppins;
+}
+
+.carrito {
+	position: relative;
+}
+
+.notification {
+	position: absolute;
+	top: -14px;
+	right: -14px;
+	min-width: 20px;
+	text-align: center;
+	font-size: 0.7rem;
+}
