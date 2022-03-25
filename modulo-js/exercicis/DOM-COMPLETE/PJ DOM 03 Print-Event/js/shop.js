@@ -14,14 +14,15 @@ const cards = document.getElementById('cards')
 cards.addEventListener('click', (e) => {
 	if (e.target.classList.contains('cardAdd')) {
 		addCarrito(e.target.id)
-		count++
-		count > 0 ? (notify.innerHTML = count) : false
+		count = updateNotify()
 		//setCarrito(e.target.parentElement)
 	}
 	if (e.target.classList.contains('cardRemove')) {
 		removeFromCart(e.target.id)
+		count = updateNotify()
 	}
 
+	notify.innerHTML = count
 	e.stopPropagation()
 })
 
@@ -155,14 +156,6 @@ function removeFromCart(id) {
 	if (objIndex != -1) {
 		cart.splice(objIndex, 1)
 		console.log('Eliminat producte de la cart: ' + id)
-		count--
-		if (cart.length == 0) {
-			notify.innerHTML = 0
-		} else if (count > 0) {
-			notify.innerHTML = count
-		} else {
-			notify.innerHTML = 0
-		}
 	} else {
 		alert('Aquest element no el tens al carret')
 	}
@@ -177,19 +170,35 @@ function pintarCarrito() {
 	cart.forEach((ele) => {
 		// const tableBody = templateCarrito.querySelector('tr')
 		// tableBody.innerHTML = `<th scope="row">${ele.id}</th><td>${ele.name}</td><td>${ele.price}</td><td>${ele.quantity}</td><td>$ <span>${ele.subtotal}</span></td>`
-		templateCarrito.querySelector(
-			'tr'
-		).innerHTML = `<th scope="row">${ele.id}</th><td>${ele.name}</td><td>${ele.price}</td><td>${ele.quantity}</td><td>$ <span>${ele.subtotal}</span></td>`
-		/*
-    templateCarrito.querySelector('tr th').textContent = ele.id
-    templateCarrito.querySelector('td:nth-child(2)').textContent = ele.name
-    templateCarrito.querySelector('td:nth-child(3)').textContent = ele.price
-    templateCarrito.querySelector('td:nth-child(4)').textContent = ele.quantity
-    templateCarrito.querySelector('tr span').textContent = ele.subtotal
-    */
+		// templateCarrito.querySelector(
+		// 	'tr'
+		// ).innerHTML = `<th scope="row">${ele.id}</th><td>${ele.name}</td><td>${ele.price}</td><td>${ele.quantity}</td><td>$ <span>${ele.subtotal}</span></td>`
+
+		templateCarrito.querySelector('tr th').textContent = ele.id
+		templateCarrito.querySelector('td:nth-child(2)').textContent = ele.name
+		templateCarrito.querySelector('td:nth-child(3)').textContent = ele.price
+		templateCarrito.querySelector('td:nth-child(4)').textContent = ele.quantity
+		templateCarrito.querySelector('tr span').textContent = ele.subtotal
+
 		const clone = templateCarrito.cloneNode(true)
 		fragment.appendChild(clone)
 	})
 
 	cardItems.appendChild(fragment)
+}
+
+// PROTOTYPE: Array sumTokeys(Array array, String key).
+// DESCRIPTION: Devuelve la suma del contenido de la key de un array
+function sumTokeys(array, key) {
+	let total = 0
+	for (let i = 0; i < array.length; i++) {
+		total += array[i][key]
+	}
+	return total
+}
+
+// PROTOTYPE: Integer updateNotify().
+// DESCRIPTION: Devuelve la cantidad de productos del cart
+function updateNotify() {
+	return sumTokeys(cart, 'quantity')
 }
