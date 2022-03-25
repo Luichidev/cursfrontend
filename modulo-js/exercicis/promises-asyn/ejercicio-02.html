@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 02</title>
+	</head>
+	<body>
+		<h1>Ejercicio 02</h1>
+		<p>1. Donada la següent promesa.</p>
+		<code>
+			function calculDescuento() { <br />
+			console.log('Aplicando el Descuento...')<br />
+			return true; <br />
+			}<br /><br />
+			const aplicarDescuento = new Promise((resolve, reject) => { <br />
+			if(calculDescuento()) { <br />
+			resolve('Descuento Aplicado'); <br />
+			} else { <br />
+			reject('No se pudo aplicar el descuento'); <br />
+			} <br />
+			})
+		</code>
+		<p>Crida a la promesa aplicarDescuento</p>
+		<p>
+			Recordar capturar l’error dins de la promesa: 'No se pudo aplicar el
+			descuento'
+		</p>
+		<div></div>
+		<script>
+			function calculDescuento() {
+				div.innerHTML = '<p style="color:red">Aplicando el Descuento...</p>'
+				return false
+			}
+
+			const aplicarDescuento = () =>
+				new Promise((resolve, reject) => {
+					if (calculDescuento()) {
+						resolve('Descuento Aplicado')
+					} else {
+						reject('No se pudo aplicar el descuento')
+					}
+				})
+
+			const div = document.querySelector('div')
+
+			async function ejecutar() {
+				try {
+					const res = await aplicarDescuento()
+					div.innerHTML += '<h1>' + res + '</h1>'
+				} catch (e) {
+					div.innerHTML = `<h1 style="color:red">${e}</h1>`
+				}
+			}
+
+			ejecutar()
+		</script>
+	</body>
+</html>

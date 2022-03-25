@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 01</title>
+	</head>
+	<body>
+		<h1>Ejercicio 01</h1>
+		<p>1. Donada la següent promesa.</p>
+		<code>
+			const paises = []; <br />const nuevoPais = pais => new Promise( resolve =>
+			{<br />
+			setTimeout(() => { paises.push(pais); <br />resolve(`Agregado: ${pais}`)
+			<br />}, 3000); <br />});
+		</code>
+		<p>
+			Fent servir promeses, agrega cada 3 segons un país: Alemania, Francia,
+			Inglaterra, Italia. Capturar errors no controlats.
+		</p>
+		<div></div>
+		<script>
+			const paises = []
+			const nuevoPais = (pais) =>
+				new Promise((resolve) => {
+					setTimeout(() => {
+						paises.push(pais)
+						resolve(`Agregado: ${pais}`)
+					}, 3000)
+				})
+
+			const div = document.querySelector('div')
+			/*
+			const newCountry = [
+				'Alemania',
+				'Francia',
+				'Inglaterra',
+				'Italia',
+				'España',
+			]
+
+			newCountry.forEach((ele) => {
+				nuevoPais(ele)
+					.then((res) => (div.innerHTML += `<p>${res}</p>`))
+					.catch((e) => console.error(e))
+			})
+*/
+			nuevoPais('Alemania')
+				.then((res) => {
+					div.innerHTML += `<p>${res}</p>`
+					return nuevoPais('Francia')
+				})
+				.then((res) => {
+					div.innerHTML += `<p>${res}</p>`
+					return nuevoPais('Inglaterra')
+				})
+				.then((res) => {
+					div.innerHTML += `<p>${res}</p>`
+					return nuevoPais('Italia')
+				})
+				.then((res) => {
+					div.innerHTML += `<p>${res}</p>`
+				})
+				.catch((e) => console.error(e))
+		</script>
+	</body>
+</html>
