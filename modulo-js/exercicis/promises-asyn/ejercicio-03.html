@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ejercicio 03</title>
+</head>
+
+<body>
+	<h1>Ejercicio 03</h1>
+	<script>
+		//PROMISSES
+		const calcula = new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				const sum = 4 + 5;
+				if (isNaN(sum)) {
+					reject('Error while calculating sum.');
+				} else {
+					resolve(sum);
+				}
+			}, 2000);
+		});
+
+		calcula.then(function (result) {
+			console.log(result);
+		}).catch(function (error) {
+			console.log(error);
+		});
+
+		//ASYNC/AWAIT
+		async function calcula1() {
+			let sum = 0;
+			setTimeout(function () {
+				sum = 5 + 5;
+				if (isNaN(sum)) {
+					throw new Error('Error while calculating sum.');
+				} else {
+					console.log(sum);
+				}
+			}, 2000);
+		}
+
+		async function inici() {
+			try {
+				await calcula1();
+			} catch (error) {
+				console.log(error);
+			}
+		}
+
+		inici();
+
+		//PROMISES + ASYNC/AWAIT
+		function calcula2() {
+			let sum = 0;
+			return new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					sum = 14 + 5 + 'A';
+					if (isNaN(sum)) {
+						reject('Error while calculating sum.');
+					} else {
+						resolve(sum);
+					}
+				}, 2000);
+			});
+		}
+
+		async function inici1() {
+			await calcula2()
+				.then(result => console.log(result))
+				.catch(e => console.error(e))
+		}
+
+		inici1();
+
+	</script>
+</body>
+
+</html>
